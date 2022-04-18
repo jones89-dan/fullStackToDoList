@@ -12,3 +12,4 @@ Rails.application.routes.draw do
   put    'tasks/:id/mark_active'    => 'tasks#mark_active'
   delete 'tasks/:id'                => 'tasks#destroy'
 end
+end
