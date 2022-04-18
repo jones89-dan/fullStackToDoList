@@ -113,3 +113,386 @@ Processing by Api::TasksController#index as HTML
 Completed 200 OK in 130ms (Views: 18.4ms | ActiveRecord: 11.1ms | Allocations: 16933)
 
 
+Started GET "/" for ::1 at 2022-04-17 20:57:41 -0700
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 318)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 6654a45b6cb4a6a92353
+Version: webpack 4.46.0
+Time: 3822ms
+Built at: 04/17/2022 8:57:49 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-dfa128c55a542ec66210.js    373 KiB  application  [emitted] [immutable]  application
+js/application-dfa128c55a542ec66210.js.map    430 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-dfa128c55a542ec66210.js js/application-dfa128c55a542ec66210.js.map
+[0] multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss 40 bytes {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 537 bytes {application} [built]
+[./app/javascript/packs/application.scss] 664 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss 262 bytes {application} [built] [failed] [1 error]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 5 hidden modules
+
+ERROR in ./app/javascript/packs/application.scss (./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss)
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+SassError: Can't find stylesheet to import.
+  ╷
+1 │ @import "boostrap";
+  │         ^^^^^^^^^^
+  ╵
+  app/javascript/packs/application.scss 1:9  root stylesheet
+ @ ./app/javascript/packs/application.scss 2:26-228
+ @ multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss
+
+
+warning ../package.json: No license field
+
+  Rendered layout layouts/application.html.erb (Duration: 7828.0ms | Allocations: 22411)
+Completed 200 OK in 7867ms (Views: 7831.8ms | ActiveRecord: 0.0ms | Allocations: 25966)
+
+
+Started GET "/" for ::1 at 2022-04-17 21:03:50 -0700
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 318)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 69.6ms | Allocations: 8130)
+Completed 200 OK in 92ms (Views: 74.8ms | ActiveRecord: 0.0ms | Allocations: 11807)
+
+
+Started GET "/" for ::1 at 2022-04-17 21:06:25 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 121)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 4128)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 5562)
+
+
+Started GET "/" for ::1 at 2022-04-17 21:08:09 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 118)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 4127)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms | Allocations: 5505)
+
+
+Started GET "/" for ::1 at 2022-04-17 21:18:11 -0700
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 1128f3f209afe300d9b3
+Version: webpack 4.46.0
+Time: 1872ms
+Built at: 04/17/2022 9:18:16 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-dfa128c55a542ec66210.js    373 KiB  application  [emitted] [immutable]  application
+js/application-dfa128c55a542ec66210.js.map    430 KiB  application  [emitted] [dev]        application
+          js/index-3e751cdcc3f210b3158d.js   4.98 KiB        index  [emitted] [immutable]  index
+      js/index-3e751cdcc3f210b3158d.js.map   3.79 KiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-dfa128c55a542ec66210.js js/application-dfa128c55a542ec66210.js.map
+Entrypoint index = js/index-3e751cdcc3f210b3158d.js js/index-3e751cdcc3f210b3158d.js.map
+[0] multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss 40 bytes {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 537 bytes {application} [built]
+[./app/javascript/packs/application.scss] 664 bytes {application} [built]
+[./app/javascript/packs/index.js] 19 bytes {index} [built]
+[./app/javascript/src/index.js] 23 bytes {index} [built]
+[./app/javascript/src/requests.js] 29 bytes {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss 262 bytes {application} [built] [failed] [1 error]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 5 hidden modules
+
+ERROR in ./app/javascript/packs/application.scss (./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss)
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+SassError: Can't find stylesheet to import.
+  ╷
+1 │ @import "boostrap";
+  │         ^^^^^^^^^^
+  ╵
+  app/javascript/packs/application.scss 1:9  root stylesheet
+ @ ./app/javascript/packs/application.scss 2:26-228
+ @ multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss
+
+
+warning ../package.json: No license field
+
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 4866.5ms | Allocations: 4041)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4945.8ms | Allocations: 10724)
+Completed 200 OK in 4975ms (Views: 4952.4ms | ActiveRecord: 0.0ms | Allocations: 14641)
+
+
+Started GET "/" for ::1 at 2022-04-17 21:24:29 -0700
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 5952c2f61d7b8c86d895
+Version: webpack 4.46.0
+Time: 1576ms
+Built at: 04/17/2022 9:24:33 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-dfa128c55a542ec66210.js    373 KiB  application  [emitted] [immutable]  application
+js/application-dfa128c55a542ec66210.js.map    430 KiB  application  [emitted] [dev]        application
+          js/index-d8e1cb9e9443a87d61b5.js   9.04 KiB        index  [emitted] [immutable]  index
+      js/index-d8e1cb9e9443a87d61b5.js.map    3.7 KiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-dfa128c55a542ec66210.js js/application-dfa128c55a542ec66210.js.map
+Entrypoint index = js/index-d8e1cb9e9443a87d61b5.js js/index-d8e1cb9e9443a87d61b5.js.map
+[0] multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss 40 bytes {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 537 bytes {application} [built]
+[./app/javascript/packs/application.scss] 664 bytes {application} [built]
+[./app/javascript/packs/index.js] 19 bytes {index} [built]
+[./app/javascript/src/index.js] 23 bytes {index} [built]
+[./app/javascript/src/requests.js] 4.08 KiB {index} [built] [failed] [1 error]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss 262 bytes {application} [built] [failed] [1 error]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 5 hidden modules
+
+ERROR in ./app/javascript/src/requests.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/djones/altCademy/Ruby/fswd-todolist/app/javascript/src/requests.js: Unexpected token, expected "," (8:26)
+
+   6 |     url: 'api/tasks?api_key=1',
+   7 |     success: function (response) {
+>  8 |       console.log(response;)
+     |                           ^
+   9 |     },
+  10 |     error: function (request, errorMsg);
+  11 |   }
+    at instantiate (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:72:32)
+    at constructor (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:358:12)
+    at Parser.raise (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:3334:19)
+    at Parser.unexpected (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:3372:16)
+    at Parser.expect (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:4001:28)
+    at Parser.parseCallExpressionArguments (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:12775:14)
+    at Parser.parseCoverCallAndAsyncArrowHead (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:12690:29)
+    at Parser.parseSubscript (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:12615:19)
+    at Parser.parseSubscripts (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:12584:19)
+    at Parser.parseExprSubscripts (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:12573:17)
+    at Parser.parseUpdate (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:12546:21)
+    at Parser.parseMaybeUnary (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:12517:23)
+    at Parser.parseMaybeUnaryOrPrivate (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:12311:61)
+    at Parser.parseExprOps (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:12318:23)
+    at Parser.parseMaybeConditional (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:12288:23)
+    at Parser.parseMaybeAssign (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:12241:21)
+    at Parser.parseExpressionBase (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:12177:23)
+    at /Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:12171:39
+    at Parser.allowInAnd (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:14259:16)
+    at Parser.parseExpression (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:12171:17)
+    at Parser.parseStatementContent (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:14699:23)
+    at Parser.parseStatement (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:14556:17)
+    at Parser.parseBlockOrModuleBlockBody (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:15195:25)
+    at Parser.parseBlockBody (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:15186:10)
+    at Parser.parseBlock (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:15170:10)
+    at Parser.parseFunctionBody (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:13864:24)
+    at Parser.parseFunctionBodyAndFinish (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:13848:10)
+    at /Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:15345:12
+    at Parser.withSmartMixTopicForbiddingContext (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:14236:14)
+    at Parser.parseFunction (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:15344:10)
+ @ ./app/javascript/src/index.js 1:0-23
+ @ ./app/javascript/packs/index.js
+
+ERROR in ./app/javascript/packs/application.scss (./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss)
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+SassError: Can't find stylesheet to import.
+  ╷
+1 │ @import "boostrap";
+  │         ^^^^^^^^^^
+  ╵
+  app/javascript/packs/application.scss 1:9  root stylesheet
+ @ ./app/javascript/packs/application.scss 2:26-228
+ @ multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss
+
+
+warning ../package.json: No license field
+
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 4224.9ms | Allocations: 4040)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4262.0ms | Allocations: 10723)
+Completed 200 OK in 4291ms (Views: 4267.9ms | ActiveRecord: 0.0ms | Allocations: 14418)
+
+
+Started GET "/" for ::1 at 2022-04-17 21:25:03 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: e48d28820f5d7ec34cd7
+Version: webpack 4.46.0
+Time: 1658ms
+Built at: 04/17/2022 9:25:07 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-dfa128c55a542ec66210.js    373 KiB  application  [emitted] [immutable]  application
+js/application-dfa128c55a542ec66210.js.map    430 KiB  application  [emitted] [dev]        application
+          js/index-ef628a8dd13014e691c9.js   8.97 KiB        index  [emitted] [immutable]  index
+      js/index-ef628a8dd13014e691c9.js.map    3.7 KiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-dfa128c55a542ec66210.js js/application-dfa128c55a542ec66210.js.map
+Entrypoint index = js/index-ef628a8dd13014e691c9.js js/index-ef628a8dd13014e691c9.js.map
+[0] multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss 40 bytes {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 537 bytes {application} [built]
+[./app/javascript/packs/application.scss] 664 bytes {application} [built]
+[./app/javascript/packs/index.js] 19 bytes {index} [built]
+[./app/javascript/src/index.js] 23 bytes {index} [built]
+[./app/javascript/src/requests.js] 4.01 KiB {index} [built] [failed] [1 error]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss 262 bytes {application} [built] [failed] [1 error]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 5 hidden modules
+
+ERROR in ./app/javascript/src/requests.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/djones/altCademy/Ruby/fswd-todolist/app/javascript/src/requests.js: Unexpected token, expected "{" (10:39)
+
+   8 |       console.log(response);
+   9 |     },
+> 10 |     error: function (request, errorMsg);
+     |                                        ^
+  11 |   }
+  12 | }
+  13 |
+    at instantiate (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:72:32)
+    at constructor (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:358:12)
+    at Parser.raise (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:3334:19)
+    at Parser.unexpected (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:3372:16)
+    at Parser.expect (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:4001:28)
+    at Parser.parseBlock (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:15164:10)
+    at Parser.parseFunctionBody (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:13864:24)
+    at Parser.parseFunctionBodyAndFinish (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:13848:10)
+    at /Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:15345:12
+    at Parser.withSmartMixTopicForbiddingContext (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:14236:14)
+    at Parser.parseFunction (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:15344:10)
+    at Parser.parseFunctionOrFunctionSent (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:13199:17)
+    at Parser.parseExprAtom (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:12921:21)
+    at Parser.parseExprSubscripts (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:12567:23)
+    at Parser.parseUpdate (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:12546:21)
+    at Parser.parseMaybeUnary (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:12517:23)
+    at Parser.parseMaybeUnaryOrPrivate (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:12311:61)
+    at Parser.parseExprOps (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:12318:23)
+    at Parser.parseMaybeConditional (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:12288:23)
+    at Parser.parseMaybeAssign (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:12241:21)
+    at /Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:12199:39
+    at Parser.allowInAnd (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:14265:12)
+    at Parser.parseMaybeAssignAllowIn (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:12199:17)
+    at Parser.parseObjectProperty (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:13682:101)
+    at Parser.parseObjPropValue (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:13715:100)
+    at Parser.parsePropertyDefinition (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:13632:10)
+    at Parser.parseObjectLike (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:13522:21)
+    at Parser.parseExprAtom (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:12917:23)
+    at Parser.parseExprSubscripts (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:12567:23)
+    at Parser.parseUpdate (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:12546:21)
+ @ ./app/javascript/src/index.js 1:0-23
+ @ ./app/javascript/packs/index.js
+
+ERROR in ./app/javascript/packs/application.scss (./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss)
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+SassError: Can't find stylesheet to import.
+  ╷
+1 │ @import "boostrap";
+  │         ^^^^^^^^^^
+  ╵
+  app/javascript/packs/application.scss 1:9  root stylesheet
+ @ ./app/javascript/packs/application.scss 2:26-228
+ @ multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss
+
+
+warning ../package.json: No license field
+
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 3673.3ms | Allocations: 3334)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3681.4ms | Allocations: 6832)
+Completed 200 OK in 3683ms (Views: 3682.0ms | ActiveRecord: 0.0ms | Allocations: 7371)
+
+
+Started GET "/" for ::1 at 2022-04-17 21:27:00 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 7216b2776e4d060b0d35
+Version: webpack 4.46.0
+Time: 3160ms
+Built at: 04/17/2022 9:27:06 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-dfa128c55a542ec66210.js    373 KiB  application  [emitted] [immutable]  application
+js/application-dfa128c55a542ec66210.js.map    430 KiB  application  [emitted] [dev]        application
+          js/index-1e127dbd8fd353d96570.js    316 KiB        index  [emitted] [immutable]  index
+      js/index-1e127dbd8fd353d96570.js.map    372 KiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-dfa128c55a542ec66210.js js/application-dfa128c55a542ec66210.js.map
+Entrypoint index = js/index-1e127dbd8fd353d96570.js js/index-1e127dbd8fd353d96570.js.map
+[0] multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss 40 bytes {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 537 bytes {application} [built]
+[./app/javascript/packs/application.scss] 664 bytes {application} [built]
+[./app/javascript/packs/index.js] 19 bytes {index} [built]
+[./app/javascript/src/index.js] 23 bytes {index} [built]
+[./app/javascript/src/requests.js] 373 bytes {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss 262 bytes {application} [built] [failed] [1 error]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {index} [built]
+    + 6 hidden modules
+
+ERROR in ./app/javascript/packs/application.scss (./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss)
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+SassError: Can't find stylesheet to import.
+  ╷
+1 │ @import "boostrap";
+  │         ^^^^^^^^^^
+  ╵
+  app/javascript/packs/application.scss 1:9  root stylesheet
+ @ ./app/javascript/packs/application.scss 2:26-228
+ @ multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss
+
+
+warning ../package.json: No license field
+
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 6361.5ms | Allocations: 3284)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6373.2ms | Allocations: 6762)
+Completed 200 OK in 6375ms (Views: 6373.9ms | ActiveRecord: 0.0ms | Allocations: 7215)
+
+
+Started GET "/api/tasks?api_key=[FILTERED]" for ::1 at 2022-04-17 21:27:07 -0700
+Processing by Api::TasksController#index as */*
+  Parameters: {"api_key"=>"[FILTERED]"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:14:in `index'
+  Rendering api/tasks/index.jbuilder
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/api/tasks/index.jbuilder:2
+  Rendered api/tasks/index.jbuilder (Duration: 14.6ms | Allocations: 5281)
+Completed 200 OK in 60ms (Views: 20.0ms | ActiveRecord: 3.8ms | Allocations: 16824)
+
+
