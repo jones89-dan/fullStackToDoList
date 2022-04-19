@@ -3,6 +3,7 @@ import $ from 'jquery';
 import {
   indexTasks,
   postTask,
+  createTask,
 } from "./requests.js";
 
 indexTasks(function (response) {
