@@ -1220,3 +1220,57 @@ Processing by Api::TasksController#index as */*
 Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 2451)
 
 
+Started GET "/" for ::1 at 2022-04-18 21:14:12 -0700
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/djones/altCademy/Ruby/fswd-todolist/public/packs
+[Webpacker] warning ../package.json: No license field
+
+[Webpacker] Hash: 9515db34d30e2baf7b78
+Version: webpack 4.46.0
+Time: 6842ms
+Built at: 04/18/2022 9:14:21 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-781aa619ed7fe3c0b09e.js   1.09 MiB  application  [emitted] [immutable]  application
+js/application-781aa619ed7fe3c0b09e.js.map   1.18 MiB  application  [emitted] [dev]        application
+          js/index-791452da5fe6b1c025be.js    317 KiB        index  [emitted] [immutable]  index
+      js/index-791452da5fe6b1c025be.js.map    373 KiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-781aa619ed7fe3c0b09e.js js/application-781aa619ed7fe3c0b09e.js.map
+Entrypoint index = js/index-791452da5fe6b1c025be.js js/index-791452da5fe6b1c025be.js.map
+[0] multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss 40 bytes {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 537 bytes {application} [built]
+[./app/javascript/packs/application.scss] 664 bytes {application} [built]
+[./app/javascript/packs/index.js] 19 bytes {index} [built]
+[./app/javascript/src/index.js] 388 bytes {index} [built]
+[./app/javascript/src/requests.js] 648 bytes {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss 744 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {index} [built]
+    + 7 hidden modules
+
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 9478.5ms | Allocations: 4133)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9526.0ms | Allocations: 10820)
+Completed 200 OK in 9553ms (Views: 9531.8ms | ActiveRecord: 0.0ms | Allocations: 14515)
+
+
+Started GET "/api/tasks?api_key=[FILTERED]" for ::1 at 2022-04-18 21:14:22 -0700
+Processing by Api::TasksController#index as */*
+  Parameters: {"api_key"=>"[FILTERED]"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:14:in `index'
+  Rendering api/tasks/index.jbuilder
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/api/tasks/index.jbuilder:2
+  Rendered api/tasks/index.jbuilder (Duration: 14.1ms | Allocations: 5283)
+Completed 200 OK in 50ms (Views: 18.1ms | ActiveRecord: 3.2ms | Allocations: 16833)
+
+
