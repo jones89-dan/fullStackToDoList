@@ -22,5 +22,5 @@ test:
 
 production:
   <<: *default
-    adapter: postgresql
-    database: to_do_list_fs
+  adapter: postgresql
+  database: to_do_list_fs
