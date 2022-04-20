@@ -26,7 +26,10 @@ export var postTask = function (content, successCB, errorCB) {
         content: $('#new-task-content').val()
       }
     },
-    success: successCB,
+    success: function (response, textStatus) {
+        $('#new-task-content').val('');
+        getAndDisplayAllTasks();
+      },
     error: errorCB
   }
 
