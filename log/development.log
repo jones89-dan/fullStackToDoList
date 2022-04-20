@@ -4955,3 +4955,357 @@ Processing by Api::TasksController#index as */*
 Completed 200 OK in 8ms (Views: 3.6ms | ActiveRecord: 0.3ms | Allocations: 2809)
 
 
+Started GET "/" for ::1 at 2022-04-20 13:04:09 -0700
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: b4189399bc1d81693482
+Version: webpack 4.46.0
+Time: 7015ms
+Built at: 04/20/2022 1:04:19 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-1afdad2734e35b8e127d.js   1.09 MiB  application  [emitted] [immutable]  application
+js/application-1afdad2734e35b8e127d.js.map   1.18 MiB  application  [emitted] [dev]        application
+          js/index-5d3a5821f3917a778cdf.js   7.98 KiB        index  [emitted] [immutable]  index
+      js/index-5d3a5821f3917a778cdf.js.map   3.61 KiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-1afdad2734e35b8e127d.js js/application-1afdad2734e35b8e127d.js.map
+Entrypoint index = js/index-5d3a5821f3917a778cdf.js js/index-5d3a5821f3917a778cdf.js.map
+[0] multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss 40 bytes {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 537 bytes {application} [built]
+[./app/javascript/packs/application.scss] 664 bytes {application} [built]
+[./app/javascript/packs/index.js] 19 bytes {index} [built]
+[./app/javascript/src/index.js] 3.52 KiB {index} [built] [failed] [1 error]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss 744 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 6 hidden modules
+
+ERROR in ./app/javascript/src/index.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/djones/altCademy/Ruby/fswd-todolist/app/javascript/src/index.js: Missing semicolon. (10:14)
+
+   8 | } from "./requests.js";
+   9 |
+> 10 | var startIndex () {
+     |               ^
+  11 |   indexTasks(function (response) {
+  12 |     var htmlString = response.tasks.map(function(task) {
+  13 |       return "<div class='col-12 panel-info text-center p-2 border rounded task' data-id='" + task.id + "'> \
+    at instantiate (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:72:32)
+    at constructor (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:358:12)
+    at Parser.raise (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:3334:19)
+    at Parser.semicolon (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:3995:10)
+    at Parser.parseVarStatement (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:15086:10)
+    at Parser.parseStatementContent (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:14631:21)
+    at Parser.parseStatement (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:14556:17)
+    at Parser.parseBlockOrModuleBlockBody (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:15195:25)
+    at Parser.parseBlockBody (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:15186:10)
+    at Parser.parseProgram (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:14474:10)
+    at Parser.parseTopLevel (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:14461:25)
+    at Parser.parse (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:16420:10)
+    at parse (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:16472:38)
+    at parser (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/core/lib/parser/index.js:52:34)
+    at parser.next (<anonymous>)
+    at normalizeFile (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/core/lib/transformation/normalize-file.js:87:38)
+    at normalizeFile.next (<anonymous>)
+    at run (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/core/lib/transformation/index.js:31:50)
+    at run.next (<anonymous>)
+    at Function.transform (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/core/lib/transform.js:25:41)
+    at transform.next (<anonymous>)
+    at step (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/gensync/index.js:261:32)
+    at /Users/djones/altCademy/Ruby/fswd-todolist/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/gensync/index.js:223:11)
+    at /Users/djones/altCademy/Ruby/fswd-todolist/node_modules/gensync/index.js:189:28
+    at /Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/core/lib/gensync-utils/async.js:74:7
+    at /Users/djones/altCademy/Ruby/fswd-todolist/node_modules/gensync/index.js:113:33
+    at step (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/gensync/index.js:287:14)
+    at /Users/djones/altCademy/Ruby/fswd-todolist/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/gensync/index.js:223:11)
+ @ ./app/javascript/packs/index.js 1:0-19
+
+
+warning ../package.json: No license field
+
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 9729.8ms | Allocations: 4063)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9753.0ms | Allocations: 10740)
+Completed 200 OK in 9773ms (Views: 9759.3ms | ActiveRecord: 0.0ms | Allocations: 14419)
+
+
+Started GET "/" for ::1 at 2022-04-20 13:04:47 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: b58f3c89e5d75d0e5840
+Version: webpack 4.46.0
+Time: 6968ms
+Built at: 04/20/2022 1:04:56 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-1afdad2734e35b8e127d.js   1.09 MiB  application  [emitted] [immutable]  application
+js/application-1afdad2734e35b8e127d.js.map   1.18 MiB  application  [emitted] [dev]        application
+          js/index-710e095c615909586cb4.js   7.99 KiB        index  [emitted] [immutable]  index
+      js/index-710e095c615909586cb4.js.map   3.61 KiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-1afdad2734e35b8e127d.js js/application-1afdad2734e35b8e127d.js.map
+Entrypoint index = js/index-710e095c615909586cb4.js js/index-710e095c615909586cb4.js.map
+[0] multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss 40 bytes {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 537 bytes {application} [built]
+[./app/javascript/packs/application.scss] 664 bytes {application} [built]
+[./app/javascript/packs/index.js] 19 bytes {index} [built]
+[./app/javascript/src/index.js] 3.52 KiB {index} [built] [failed] [1 error]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss 744 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 6 hidden modules
+
+ERROR in ./app/javascript/src/index.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/djones/altCademy/Ruby/fswd-todolist/app/javascript/src/index.js: Missing semicolon. (10:13)
+
+   8 | } from "./requests.js";
+   9 |
+> 10 | startIndex () {
+     |              ^
+  11 |   indexTasks(function (response) {
+  12 |     var htmlString = response.tasks.map(function(task) {
+  13 |       return "<div class='col-12 panel-info text-center p-2 border rounded task' data-id='" + task.id + "'> \
+    at instantiate (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:72:32)
+    at constructor (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:358:12)
+    at Parser.raise (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:3334:19)
+    at Parser.semicolon (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:3995:10)
+    at Parser.parseExpressionStatement (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:15153:10)
+    at Parser.parseStatementContent (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:14704:19)
+    at Parser.parseStatement (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:14556:17)
+    at Parser.parseBlockOrModuleBlockBody (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:15195:25)
+    at Parser.parseBlockBody (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:15186:10)
+    at Parser.parseProgram (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:14474:10)
+    at Parser.parseTopLevel (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:14461:25)
+    at Parser.parse (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:16420:10)
+    at parse (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:16472:38)
+    at parser (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/core/lib/parser/index.js:52:34)
+    at parser.next (<anonymous>)
+    at normalizeFile (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/core/lib/transformation/normalize-file.js:87:38)
+    at normalizeFile.next (<anonymous>)
+    at run (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/core/lib/transformation/index.js:31:50)
+    at run.next (<anonymous>)
+    at Function.transform (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/core/lib/transform.js:25:41)
+    at transform.next (<anonymous>)
+    at step (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/gensync/index.js:261:32)
+    at /Users/djones/altCademy/Ruby/fswd-todolist/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/gensync/index.js:223:11)
+    at /Users/djones/altCademy/Ruby/fswd-todolist/node_modules/gensync/index.js:189:28
+    at /Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/core/lib/gensync-utils/async.js:74:7
+    at /Users/djones/altCademy/Ruby/fswd-todolist/node_modules/gensync/index.js:113:33
+    at step (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/gensync/index.js:287:14)
+    at /Users/djones/altCademy/Ruby/fswd-todolist/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/gensync/index.js:223:11)
+ @ ./app/javascript/packs/index.js 1:0-19
+
+
+warning ../package.json: No license field
+
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 9281.2ms | Allocations: 3352)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9306.2ms | Allocations: 6852)
+Completed 200 OK in 9308ms (Views: 9307.1ms | ActiveRecord: 0.0ms | Allocations: 7399)
+
+
+Started GET "/" for ::1 at 2022-04-20 13:05:16 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: b58f3c89e5d75d0e5840
+Version: webpack 4.46.0
+Time: 6600ms
+Built at: 04/20/2022 1:05:25 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-1afdad2734e35b8e127d.js   1.09 MiB  application  [emitted] [immutable]  application
+js/application-1afdad2734e35b8e127d.js.map   1.18 MiB  application  [emitted] [dev]        application
+          js/index-710e095c615909586cb4.js   7.99 KiB        index  [emitted] [immutable]  index
+      js/index-710e095c615909586cb4.js.map   3.61 KiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-1afdad2734e35b8e127d.js js/application-1afdad2734e35b8e127d.js.map
+Entrypoint index = js/index-710e095c615909586cb4.js js/index-710e095c615909586cb4.js.map
+[0] multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss 40 bytes {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 537 bytes {application} [built]
+[./app/javascript/packs/application.scss] 664 bytes {application} [built]
+[./app/javascript/packs/index.js] 19 bytes {index} [built]
+[./app/javascript/src/index.js] 3.52 KiB {index} [built] [failed] [1 error]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss 744 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 6 hidden modules
+
+ERROR in ./app/javascript/src/index.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/djones/altCademy/Ruby/fswd-todolist/app/javascript/src/index.js: Missing semicolon. (10:13)
+
+   8 | } from "./requests.js";
+   9 |
+> 10 | startIndex () {
+     |              ^
+  11 |   indexTasks(function (response) {
+  12 |     var htmlString = response.tasks.map(function(task) {
+  13 |       return "<div class='col-12 panel-info text-center p-2 border rounded task' data-id='" + task.id + "'> \
+    at instantiate (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:72:32)
+    at constructor (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:358:12)
+    at Parser.raise (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:3334:19)
+    at Parser.semicolon (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:3995:10)
+    at Parser.parseExpressionStatement (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:15153:10)
+    at Parser.parseStatementContent (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:14704:19)
+    at Parser.parseStatement (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:14556:17)
+    at Parser.parseBlockOrModuleBlockBody (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:15195:25)
+    at Parser.parseBlockBody (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:15186:10)
+    at Parser.parseProgram (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:14474:10)
+    at Parser.parseTopLevel (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:14461:25)
+    at Parser.parse (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:16420:10)
+    at parse (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/parser/lib/index.js:16472:38)
+    at parser (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/core/lib/parser/index.js:52:34)
+    at parser.next (<anonymous>)
+    at normalizeFile (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/core/lib/transformation/normalize-file.js:87:38)
+    at normalizeFile.next (<anonymous>)
+    at run (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/core/lib/transformation/index.js:31:50)
+    at run.next (<anonymous>)
+    at Function.transform (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/core/lib/transform.js:25:41)
+    at transform.next (<anonymous>)
+    at step (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/gensync/index.js:261:32)
+    at /Users/djones/altCademy/Ruby/fswd-todolist/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/gensync/index.js:223:11)
+    at /Users/djones/altCademy/Ruby/fswd-todolist/node_modules/gensync/index.js:189:28
+    at /Users/djones/altCademy/Ruby/fswd-todolist/node_modules/@babel/core/lib/gensync-utils/async.js:74:7
+    at /Users/djones/altCademy/Ruby/fswd-todolist/node_modules/gensync/index.js:113:33
+    at step (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/gensync/index.js:287:14)
+    at /Users/djones/altCademy/Ruby/fswd-todolist/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/djones/altCademy/Ruby/fswd-todolist/node_modules/gensync/index.js:223:11)
+ @ ./app/javascript/packs/index.js 1:0-19
+
+
+warning ../package.json: No license field
+
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 8980.4ms | Allocations: 3360)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8987.4ms | Allocations: 6836)
+Completed 200 OK in 8990ms (Views: 8988.5ms | ActiveRecord: 0.0ms | Allocations: 7281)
+
+
+Started GET "/" for ::1 at 2022-04-20 13:06:38 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/djones/altCademy/Ruby/fswd-todolist/public/packs
+[Webpacker] warning ../package.json: No license field
+
+[Webpacker] Hash: 115d4900596b50b7f671
+Version: webpack 4.46.0
+Time: 8198ms
+Built at: 04/20/2022 1:06:49 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-1afdad2734e35b8e127d.js   1.09 MiB  application  [emitted] [immutable]  application
+js/application-1afdad2734e35b8e127d.js.map   1.18 MiB  application  [emitted] [dev]        application
+          js/index-fe196f879b0869c5d535.js    319 KiB        index  [emitted] [immutable]  index
+      js/index-fe196f879b0869c5d535.js.map    374 KiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-1afdad2734e35b8e127d.js js/application-1afdad2734e35b8e127d.js.map
+Entrypoint index = js/index-fe196f879b0869c5d535.js js/index-fe196f879b0869c5d535.js.map
+[0] multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss 40 bytes {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 537 bytes {application} [built]
+[./app/javascript/packs/application.scss] 664 bytes {application} [built]
+[./app/javascript/packs/index.js] 19 bytes {index} [built]
+[./app/javascript/src/index.js] 839 bytes {index} [built]
+[./app/javascript/src/requests.js] 1.05 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss 744 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {index} [built]
+    + 7 hidden modules
+
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 11646.1ms | Allocations: 3375)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11657.7ms | Allocations: 6851)
+Completed 200 OK in 11659ms (Views: 11658.4ms | ActiveRecord: 0.0ms | Allocations: 7297)
+
+
+Started GET "/api/tasks?api_key=[FILTERED]" for ::1 at 2022-04-20 13:06:50 -0700
+Processing by Api::TasksController#index as */*
+  Parameters: {"api_key"=>"[FILTERED]"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:14:in `index'
+  Rendering api/tasks/index.jbuilder
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/api/tasks/index.jbuilder:2
+  Rendered api/tasks/index.jbuilder (Duration: 25.5ms | Allocations: 5689)
+Completed 200 OK in 77ms (Views: 28.7ms | ActiveRecord: 2.9ms | Allocations: 17239)
+
+
+Started DELETE "/api/tasks/4?api_key=[FILTERED]" for ::1 at 2022-04-20 13:06:55 -0700
+Processing by Api::TasksController#destroy as */*
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:28:in `destroy'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:29:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:32:in `destroy'
+  [1m[36mTask Destroy (0.7ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/api/tasks_controller.rb:32:in `destroy'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:32:in `destroy'
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 3.4ms | Allocations: 3839)
+
+
+Started GET "/" for ::1 at 2022-04-20 13:06:55 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+Started GET "/api/tasks?api_key=[FILTERED]" for ::1 at 2022-04-20 13:06:55 -0700
+Processing by Api::TasksController#index as */*
+  Parameters: {"api_key"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:14:in `index'
+  Rendering api/tasks/index.jbuilder
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/api/tasks/index.jbuilder:2
+  Rendered api/tasks/index.jbuilder (Duration: 2.5ms | Allocations: 1197)
+Completed 200 OK in 14ms (Views: 3.4ms | ActiveRecord: 0.5ms | Allocations: 3590)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 44.5ms | Allocations: 7432)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 60.8ms | Allocations: 11014)
+Completed 200 OK in 63ms (Views: 61.7ms | ActiveRecord: 0.0ms | Allocations: 11477)
+
+
+Started GET "/api/tasks?api_key=[FILTERED]" for ::1 at 2022-04-20 13:06:56 -0700
+Processing by Api::TasksController#index as */*
+  Parameters: {"api_key"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:14:in `index'
+  Rendering api/tasks/index.jbuilder
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/api/tasks/index.jbuilder:2
+  Rendered api/tasks/index.jbuilder (Duration: 3.2ms | Allocations: 1188)
+Completed 200 OK in 9ms (Views: 3.8ms | ActiveRecord: 0.3ms | Allocations: 2657)
+
+
