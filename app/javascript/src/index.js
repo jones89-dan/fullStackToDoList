@@ -14,5 +14,11 @@ indexTasks(function (response) {
   });
 
   $("#tasks").html(htmlString);
+
+  $('#create-task').on('submit', function (e) {
+      e.preventDefault();
+      postTask();
+    });
+
   console.log(response);
 });

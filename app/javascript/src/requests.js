@@ -20,44 +20,20 @@ export var indexTasks = function (successCB, errorCB) {
 export var postTask = function (content, successCB, errorCB) {
   var request = {
     type: 'POST',
-    url: 'api/tasks/create?api_key=1',
+    url: 'api/tasks?api_key=1',
     data: {
       task: {
-        content: content
+        content: $('#new-task-content').val()
       }
     },
     success: successCB,
     error: errorCB
   }
 
-  $.ajax(request)
-}
+  $.ajax(request);
+};
 
-export var createTask = function () {
-  $.ajax({
-    type: 'POST',
-    url: 'api/tasks/create?api_key=1',
-    contentType: 'application/json',
-    dataType: 'json',
-    data: JSON.stringify({
-      task: {
-        content: $('#new-task-content').val()
-      }
-    }),
-    success: function (response, textStatus) {
-       $('#new-task-content').val('');
-       indexTasks();
-     },
-     error: function (request, textStatus, errorMessage) {
-       console.log(errorMessage);
-     }
-  });
-}
 
-$('#create-task').on('submit', function (e) {
-    e.preventDefault();
-    createTask();
-  });
 //indexTasks();
 
 console.log('ajax requests');
