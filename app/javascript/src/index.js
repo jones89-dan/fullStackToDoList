@@ -4,13 +4,14 @@ import {
   indexTasks,
   postTask,
   createTask,
+  deleteTask,
 } from "./requests.js";
 
 indexTasks(function (response) {
   var htmlString = response.tasks.map(function(task) {
     return "<div class='col-12 panel-info text-center p-2 border rounded task' data-id='" + task.id + "'> \
-        " + task.content + "\
-      <button type='button' class='float-right btn btn-primary'>Complete</button></div>";
+      <button type='button' class='float-left btn btn-outline-primary btn-sm'>Complete</button>" + task.content + "\
+      <button type='button' class='delete float-right btn btn-outline-primary btn-sm'>Delete</button></div>";
 
     });
 
@@ -19,6 +20,16 @@ indexTasks(function (response) {
   $('#create-task').on('submit', function (e) {
       postTask();
     });
+
+  //$(document).on('click', '.delete', function () {
+  //  deleteTask($(delete).data("id"));
+  //});
+
+  $('.delete').click(function(e){
+    var id = $(e.target).attr("data-id");
+      //deleteTask(id);
+      console.log("id= " + id);
+  });
 
   console.log(response);
 });

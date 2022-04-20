@@ -36,7 +36,17 @@ export var postTask = function (content, successCB, errorCB) {
   $.ajax(request);
 };
 
-
-//indexTasks();
+export var deleteTask = function (id) {
+  $.ajax({
+    type: 'DELETE',
+      url: 'api/tasks/' + id + "?api_key=1",
+      success: function (response, textStatus) {
+        indexTasks();
+        },
+        error: function (request, textStatus, errorMessage) {
+          console.log(errorMessage);
+        }
+      });
+}
 
 console.log('ajax requests');
