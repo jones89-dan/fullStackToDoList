@@ -26,8 +26,9 @@ indexTasks(function (response) {
   //});
 
   $('.delete').click(function(e){
-    var id = $(e.target).attr("data-id");
-      //deleteTask(id);
+    var id = $(e.target).parent().attr("data-id");
+      deleteTask(id);
+      indexTasks();
       console.log("id= " + id);
   });
 
