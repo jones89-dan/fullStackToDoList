@@ -10,7 +10,7 @@ import {
   indexTasks(function (response) {
     var htmlString = response.tasks.map(function(task) {
       return "<div class='col-12 panel-info text-center p-2 border rounded task' data-id='" + task.id + "'> \
-        <button type='button' class='float-left btn btn-outline-primary btn-sm'>Complete</button>" + task.content + "\
+        <button type='button' class='complete float-left btn btn-outline-primary btn-sm'>Complete</button>" + task.content + "\
         <button type='button' class='delete float-right btn btn-outline-primary btn-sm'>Delete</button></div>";
 
       });
@@ -29,8 +29,15 @@ $(document).ready(function(){
   $('.delete').click(function(e){
   var id = $(e.target).parent().attr("data-id");
     deleteTask(id);
-    window.location.reload();
+    $(e.target).parent().toggle();
     console.log("id= " + id);
   });
+
+
+    $('.complete').click(function(){
+
+      $(this).parent().toggleClass("green");
+
+    });
 
 });
