@@ -7,7 +7,6 @@ import {
   deleteTask,
 } from "./requests.js";
 
-
   indexTasks(function (response) {
     var htmlString = response.tasks.map(function(task) {
       return "<div class='col-12 panel-info text-center p-2 border rounded task' data-id='" + task.id + "'> \
@@ -17,18 +16,21 @@ import {
       });
 
     $("#tasks").html(htmlString);
+    console.log(response);
 
-    $('#create-task').on('submit', function (e) {
-        postTask();
-      });
-
-
-  $('.delete').click(function(e){
-    var id = $(e.target).parent().attr("data-id");
-      deleteTask(id);
-      window.location.reload();
-      console.log("id= " + id);
   });
 
-  console.log(response);
+$(document).ready(function(){
+
+  $('#create-task').on('submit', function (e) {
+      postTask();
+    });
+
+  $('.delete').click(function(e){
+  var id = $(e.target).parent().attr("data-id");
+    deleteTask(id);
+    window.location.reload();
+    console.log("id= " + id);
+  });
+
 });
