@@ -14092,3 +14092,1080 @@ Processing by Api::TasksController#mark_complete as */*
 Completed 200 OK in 6ms (Views: 1.0ms | ActiveRecord: 0.3ms | Allocations: 2368)
 
 
+Started GET "/" for ::1 at 2022-04-24 21:15:54 -0700
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/djones/altCademy/Ruby/fswd-todolist/public/packs
+[Webpacker] warning ../package.json: No license field
+
+[Webpacker] Hash: fbf1cdcdfc354337fed5
+Version: webpack 4.46.0
+Time: 15527ms
+Built at: 04/24/2022 9:16:13 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-5c3c803a1660e7dca552.js   1.09 MiB  application  [emitted] [immutable]  application
+js/application-5c3c803a1660e7dca552.js.map   1.18 MiB  application  [emitted] [dev]        application
+          js/index-72d3a18c70cb87f879c1.js    320 KiB        index  [emitted] [immutable]  index
+      js/index-72d3a18c70cb87f879c1.js.map    375 KiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-5c3c803a1660e7dca552.js js/application-5c3c803a1660e7dca552.js.map
+Entrypoint index = js/index-72d3a18c70cb87f879c1.js js/index-72d3a18c70cb87f879c1.js.map
+[0] multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss 40 bytes {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 537 bytes {application} [built]
+[./app/javascript/packs/application.scss] 664 bytes {application} [built]
+[./app/javascript/packs/index.js] 19 bytes {index} [built]
+[./app/javascript/src/index.js] 1.04 KiB {index} [built]
+[./app/javascript/src/requests.js] 1.36 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss 744 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {index} [built]
+    + 7 hidden modules
+
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 19016.3ms | Allocations: 4165)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19033.2ms | Allocations: 10842)
+Completed 200 OK in 19053ms (Views: 19040.0ms | ActiveRecord: 0.0ms | Allocations: 14518)
+
+
+Started GET "/api/tasks?api_key=[FILTERED]" for ::1 at 2022-04-24 21:16:13 -0700
+Processing by Api::TasksController#index as */*
+  Parameters: {"api_key"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:14:in `index'
+  Rendering api/tasks/index.jbuilder
+  [1m[36mTask Load (2.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/api/tasks/index.jbuilder:2
+  Rendered api/tasks/index.jbuilder (Duration: 17.1ms | Allocations: 5419)
+Completed 200 OK in 59ms (Views: 19.4ms | ActiveRecord: 5.4ms | Allocations: 16943)
+
+
+Started PUT "/api/tasks/28/mark_complete?api_key=[FILTERED]" for ::1 at 2022-04-24 21:16:17 -0700
+Processing by Api::TasksController#mark_complete as */*
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"28"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:46:in `mark_complete'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:47:in `mark_complete'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.7ms | Allocations: 218)
+Completed 200 OK in 17ms (Views: 2.1ms | ActiveRecord: 0.4ms | Allocations: 3414)
+
+
+Started GET "/" for ::1 at 2022-04-24 21:17:58 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 2208)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 5777)
+Completed 200 OK in 23ms (Views: 23.0ms | ActiveRecord: 0.0ms | Allocations: 6230)
+
+
+Started GET "/api/tasks?api_key=[FILTERED]" for ::1 at 2022-04-24 21:17:59 -0700
+Processing by Api::TasksController#index as */*
+  Parameters: {"api_key"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:14:in `index'
+  Rendering api/tasks/index.jbuilder
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/api/tasks/index.jbuilder:2
+  Rendered api/tasks/index.jbuilder (Duration: 2.5ms | Allocations: 1055)
+Completed 200 OK in 7ms (Views: 3.3ms | ActiveRecord: 0.4ms | Allocations: 2533)
+
+
+Started PUT "/api/tasks/28/mark_complete?api_key=[FILTERED]" for ::1 at 2022-04-24 21:18:01 -0700
+Processing by Api::TasksController#mark_complete as */*
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"28"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:46:in `mark_complete'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:47:in `mark_complete'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.2ms | Allocations: 133)
+Completed 200 OK in 7ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 2383)
+
+
+Started GET "/" for ::1 at 2022-04-24 21:18:28 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/djones/altCademy/Ruby/fswd-todolist/public/packs
+[Webpacker] warning ../package.json: No license field
+
+[Webpacker] Hash: 89ea1097f64e6b78997d
+Version: webpack 4.46.0
+Time: 7271ms
+Built at: 04/24/2022 9:18:39 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-5c3c803a1660e7dca552.js   1.09 MiB  application  [emitted] [immutable]  application
+js/application-5c3c803a1660e7dca552.js.map   1.18 MiB  application  [emitted] [dev]        application
+          js/index-231cd10d84e6ecf2339b.js    320 KiB        index  [emitted] [immutable]  index
+      js/index-231cd10d84e6ecf2339b.js.map    375 KiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-5c3c803a1660e7dca552.js js/application-5c3c803a1660e7dca552.js.map
+Entrypoint index = js/index-231cd10d84e6ecf2339b.js js/index-231cd10d84e6ecf2339b.js.map
+[0] multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss 40 bytes {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 537 bytes {application} [built]
+[./app/javascript/packs/application.scss] 664 bytes {application} [built]
+[./app/javascript/packs/index.js] 19 bytes {index} [built]
+[./app/javascript/src/index.js] 1.07 KiB {index} [built]
+[./app/javascript/src/requests.js] 1.33 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss 744 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {index} [built]
+    + 7 hidden modules
+
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 10472.9ms | Allocations: 3401)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10480.4ms | Allocations: 6877)
+Completed 200 OK in 10482ms (Views: 10481.0ms | ActiveRecord: 0.0ms | Allocations: 7322)
+
+
+Started GET "/api/tasks?api_key=[FILTERED]" for ::1 at 2022-04-24 21:18:39 -0700
+Processing by Api::TasksController#index as */*
+  Parameters: {"api_key"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:14:in `index'
+  Rendering api/tasks/index.jbuilder
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/api/tasks/index.jbuilder:2
+  Rendered api/tasks/index.jbuilder (Duration: 1.9ms | Allocations: 1052)
+Completed 200 OK in 7ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 2524)
+
+
+Started GET "/" for ::1 at 2022-04-24 21:24:27 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/djones/altCademy/Ruby/fswd-todolist/public/packs
+[Webpacker] warning ../package.json: No license field
+
+[Webpacker] Hash: 025ef4f8ff5729b2d2c7
+Version: webpack 4.46.0
+Time: 7187ms
+Built at: 04/24/2022 9:24:38 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-5c3c803a1660e7dca552.js   1.09 MiB  application  [emitted] [immutable]  application
+js/application-5c3c803a1660e7dca552.js.map   1.18 MiB  application  [emitted] [dev]        application
+          js/index-b307cc50a03b4eda96dc.js    320 KiB        index  [emitted] [immutable]  index
+      js/index-b307cc50a03b4eda96dc.js.map    375 KiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-5c3c803a1660e7dca552.js js/application-5c3c803a1660e7dca552.js.map
+Entrypoint index = js/index-b307cc50a03b4eda96dc.js js/index-b307cc50a03b4eda96dc.js.map
+[0] multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss 40 bytes {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 537 bytes {application} [built]
+[./app/javascript/packs/application.scss] 664 bytes {application} [built]
+[./app/javascript/packs/index.js] 19 bytes {index} [built]
+[./app/javascript/src/index.js] 1.14 KiB {index} [built]
+[./app/javascript/src/requests.js] 1.33 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss 744 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {index} [built]
+    + 7 hidden modules
+
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 10552.7ms | Allocations: 3373)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10605.3ms | Allocations: 6863)
+Completed 200 OK in 10614ms (Views: 10607.3ms | Allocations: 7306)
+
+
+Started GET "/api/tasks?api_key=[FILTERED]" for ::1 at 2022-04-24 21:24:38 -0700
+Processing by Api::TasksController#index as */*
+  Parameters: {"api_key"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:14:in `index'
+  Rendering api/tasks/index.jbuilder
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/api/tasks/index.jbuilder:2
+  Rendered api/tasks/index.jbuilder (Duration: 3.2ms | Allocations: 1071)
+Completed 200 OK in 12ms (Views: 3.3ms | ActiveRecord: 1.9ms | Allocations: 3087)
+
+
+Started GET "/" for ::1 at 2022-04-24 21:25:01 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/djones/altCademy/Ruby/fswd-todolist/public/packs
+[Webpacker] warning ../package.json: No license field
+
+[Webpacker] Hash: b951b9be00b039174927
+Version: webpack 4.46.0
+Time: 10746ms
+Built at: 04/24/2022 9:25:15 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-5c3c803a1660e7dca552.js   1.09 MiB  application  [emitted] [immutable]  application
+js/application-5c3c803a1660e7dca552.js.map   1.18 MiB  application  [emitted] [dev]        application
+          js/index-ba06aef5a38263028631.js    320 KiB        index  [emitted] [immutable]  index
+      js/index-ba06aef5a38263028631.js.map    375 KiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-5c3c803a1660e7dca552.js js/application-5c3c803a1660e7dca552.js.map
+Entrypoint index = js/index-ba06aef5a38263028631.js js/index-ba06aef5a38263028631.js.map
+[0] multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss 40 bytes {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 537 bytes {application} [built]
+[./app/javascript/packs/application.scss] 664 bytes {application} [built]
+[./app/javascript/packs/index.js] 19 bytes {index} [built]
+[./app/javascript/src/index.js] 1.07 KiB {index} [built]
+[./app/javascript/src/requests.js] 1.33 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss 744 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {index} [built]
+    + 7 hidden modules
+
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 13974.1ms | Allocations: 3382)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13981.7ms | Allocations: 6860)
+Completed 200 OK in 13983ms (Views: 13982.2ms | ActiveRecord: 0.0ms | Allocations: 7311)
+
+
+Started GET "/api/tasks?api_key=[FILTERED]" for ::1 at 2022-04-24 21:25:15 -0700
+Processing by Api::TasksController#index as */*
+  Parameters: {"api_key"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:14:in `index'
+  Rendering api/tasks/index.jbuilder
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/api/tasks/index.jbuilder:2
+  Rendered api/tasks/index.jbuilder (Duration: 5.4ms | Allocations: 1052)
+Completed 200 OK in 9ms (Views: 5.2ms | ActiveRecord: 1.1ms | Allocations: 2536)
+
+
+Started PUT "/api/tasks/28/mark_complete?api_key=[FILTERED]" for ::1 at 2022-04-24 21:25:54 -0700
+Processing by Api::TasksController#mark_complete as */*
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"28"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:46:in `mark_complete'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:47:in `mark_complete'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.2ms | Allocations: 132)
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 0.5ms | Allocations: 2381)
+
+
+Started PUT "/api/tasks/28/mark_complete?api_key=[FILTERED]" for ::1 at 2022-04-24 21:25:55 -0700
+Processing by Api::TasksController#mark_complete as */*
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"28"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:46:in `mark_complete'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:47:in `mark_complete'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.6ms | Allocations: 132)
+Completed 200 OK in 6ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 2361)
+
+
+Started GET "/" for ::1 at 2022-04-24 21:28:08 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/djones/altCademy/Ruby/fswd-todolist/public/packs
+[Webpacker] warning ../package.json: No license field
+
+[Webpacker] Hash: 7a89349240e27a751c3a
+Version: webpack 4.46.0
+Time: 7246ms
+Built at: 04/24/2022 9:28:18 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-5c3c803a1660e7dca552.js   1.09 MiB  application  [emitted] [immutable]  application
+js/application-5c3c803a1660e7dca552.js.map   1.18 MiB  application  [emitted] [dev]        application
+          js/index-d533d98711e237f40468.js    320 KiB        index  [emitted] [immutable]  index
+      js/index-d533d98711e237f40468.js.map    375 KiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-5c3c803a1660e7dca552.js js/application-5c3c803a1660e7dca552.js.map
+Entrypoint index = js/index-d533d98711e237f40468.js js/index-d533d98711e237f40468.js.map
+[0] multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss 40 bytes {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 537 bytes {application} [built]
+[./app/javascript/packs/application.scss] 664 bytes {application} [built]
+[./app/javascript/packs/index.js] 19 bytes {index} [built]
+[./app/javascript/src/index.js] 1.04 KiB {index} [built]
+[./app/javascript/src/requests.js] 1.33 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss 744 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {index} [built]
+    + 7 hidden modules
+
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 10401.5ms | Allocations: 3372)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10408.2ms | Allocations: 6848)
+Completed 200 OK in 10409ms (Views: 10408.7ms | ActiveRecord: 0.0ms | Allocations: 7293)
+
+
+Started GET "/api/tasks?api_key=[FILTERED]" for ::1 at 2022-04-24 21:28:19 -0700
+Processing by Api::TasksController#index as */*
+  Parameters: {"api_key"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:14:in `index'
+  Rendering api/tasks/index.jbuilder
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/api/tasks/index.jbuilder:2
+  Rendered api/tasks/index.jbuilder (Duration: 3.5ms | Allocations: 1052)
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 0.6ms | Allocations: 2523)
+
+
+Started GET "/" for ::1 at 2022-04-24 21:29:00 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/djones/altCademy/Ruby/fswd-todolist/public/packs
+[Webpacker] warning ../package.json: No license field
+
+[Webpacker] Hash: 1f2efc5a46122840e66d
+Version: webpack 4.46.0
+Time: 8661ms
+Built at: 04/24/2022 9:29:13 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-5c3c803a1660e7dca552.js   1.09 MiB  application  [emitted] [immutable]  application
+js/application-5c3c803a1660e7dca552.js.map   1.18 MiB  application  [emitted] [dev]        application
+          js/index-faa04020ab1b6f792a1c.js    320 KiB        index  [emitted] [immutable]  index
+      js/index-faa04020ab1b6f792a1c.js.map    375 KiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-5c3c803a1660e7dca552.js js/application-5c3c803a1660e7dca552.js.map
+Entrypoint index = js/index-faa04020ab1b6f792a1c.js js/index-faa04020ab1b6f792a1c.js.map
+[0] multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss 40 bytes {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 537 bytes {application} [built]
+[./app/javascript/packs/application.scss] 664 bytes {application} [built]
+[./app/javascript/packs/index.js] 19 bytes {index} [built]
+[./app/javascript/src/index.js] 1.04 KiB {index} [built]
+[./app/javascript/src/requests.js] 1.33 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss 744 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {index} [built]
+    + 7 hidden modules
+
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 12923.1ms | Allocations: 3378)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12930.5ms | Allocations: 6854)
+Completed 200 OK in 12938ms (Views: 12931.1ms | ActiveRecord: 0.0ms | Allocations: 7299)
+
+
+Started GET "/api/tasks?api_key=[FILTERED]" for ::1 at 2022-04-24 21:29:13 -0700
+Processing by Api::TasksController#index as */*
+  Parameters: {"api_key"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:14:in `index'
+  Rendering api/tasks/index.jbuilder
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/api/tasks/index.jbuilder:2
+  Rendered api/tasks/index.jbuilder (Duration: 2.2ms | Allocations: 1052)
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 0.4ms | Allocations: 2524)
+
+
+Started GET "/" for ::1 at 2022-04-24 21:31:11 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/djones/altCademy/Ruby/fswd-todolist/public/packs
+[Webpacker] warning ../package.json: No license field
+
+[Webpacker] Hash: e74242206a715cb2a6b1
+Version: webpack 4.46.0
+Time: 7129ms
+Built at: 04/24/2022 9:31:21 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-5c3c803a1660e7dca552.js   1.09 MiB  application  [emitted] [immutable]  application
+js/application-5c3c803a1660e7dca552.js.map   1.18 MiB  application  [emitted] [dev]        application
+          js/index-be03f9caaf121595d111.js    320 KiB        index  [emitted] [immutable]  index
+      js/index-be03f9caaf121595d111.js.map    375 KiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-5c3c803a1660e7dca552.js js/application-5c3c803a1660e7dca552.js.map
+Entrypoint index = js/index-be03f9caaf121595d111.js js/index-be03f9caaf121595d111.js.map
+[0] multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss 40 bytes {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 537 bytes {application} [built]
+[./app/javascript/packs/application.scss] 664 bytes {application} [built]
+[./app/javascript/packs/index.js] 19 bytes {index} [built]
+[./app/javascript/src/index.js] 1.04 KiB {index} [built]
+[./app/javascript/src/requests.js] 1.33 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss 744 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {index} [built]
+    + 7 hidden modules
+
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 10397.9ms | Allocations: 3373)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10410.4ms | Allocations: 6864)
+Completed 200 OK in 10413ms (Views: 10411.2ms | ActiveRecord: 0.0ms | Allocations: 7310)
+
+
+Started GET "/api/tasks?api_key=[FILTERED]" for ::1 at 2022-04-24 21:31:22 -0700
+Processing by Api::TasksController#index as */*
+  Parameters: {"api_key"=>"[FILTERED]"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:14:in `index'
+  Rendering api/tasks/index.jbuilder
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/api/tasks/index.jbuilder:2
+  Rendered api/tasks/index.jbuilder (Duration: 4.6ms | Allocations: 1052)
+Completed 200 OK in 19ms (Views: 5.8ms | ActiveRecord: 0.9ms | Allocations: 2522)
+
+
+Started GET "/" for ::1 at 2022-04-24 21:34:50 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/djones/altCademy/Ruby/fswd-todolist/public/packs
+[Webpacker] warning ../package.json: No license field
+
+[Webpacker] Hash: aeba67c7036efd5737fe
+Version: webpack 4.46.0
+Time: 7604ms
+Built at: 04/24/2022 9:35:04 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-5c3c803a1660e7dca552.js   1.09 MiB  application  [emitted] [immutable]  application
+js/application-5c3c803a1660e7dca552.js.map   1.18 MiB  application  [emitted] [dev]        application
+          js/index-7cd16c0f10d3a550b539.js    320 KiB        index  [emitted] [immutable]  index
+      js/index-7cd16c0f10d3a550b539.js.map    375 KiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-5c3c803a1660e7dca552.js js/application-5c3c803a1660e7dca552.js.map
+Entrypoint index = js/index-7cd16c0f10d3a550b539.js js/index-7cd16c0f10d3a550b539.js.map
+[0] multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss 40 bytes {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 537 bytes {application} [built]
+[./app/javascript/packs/application.scss] 664 bytes {application} [built]
+[./app/javascript/packs/index.js] 19 bytes {index} [built]
+[./app/javascript/src/index.js] 1.04 KiB {index} [built]
+[./app/javascript/src/requests.js] 1.33 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss 744 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {index} [built]
+    + 7 hidden modules
+
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 14254.3ms | Allocations: 3396)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14261.6ms | Allocations: 6872)
+Completed 200 OK in 14271ms (Views: 14263.4ms | ActiveRecord: 0.0ms | Allocations: 7317)
+
+
+Started GET "/api/tasks?api_key=[FILTERED]" for ::1 at 2022-04-24 21:35:04 -0700
+Processing by Api::TasksController#index as */*
+  Parameters: {"api_key"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:14:in `index'
+  Rendering api/tasks/index.jbuilder
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/api/tasks/index.jbuilder:2
+  Rendered api/tasks/index.jbuilder (Duration: 1.7ms | Allocations: 1052)
+Completed 200 OK in 7ms (Views: 2.4ms | ActiveRecord: 0.6ms | Allocations: 2522)
+
+
+Started PUT "/api/tasks/28/mark_complete?api_key=[FILTERED]" for ::1 at 2022-04-24 21:35:40 -0700
+Processing by Api::TasksController#mark_complete as */*
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"28"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:46:in `mark_complete'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:47:in `mark_complete'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.2ms | Allocations: 132)
+Completed 200 OK in 9ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 2358)
+
+
+Started PUT "/api/tasks/28/mark_complete?api_key=[FILTERED]" for ::1 at 2022-04-24 21:35:42 -0700
+Processing by Api::TasksController#mark_complete as */*
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"28"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:46:in `mark_complete'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:47:in `mark_complete'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.2ms | Allocations: 132)
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 0.3ms | Allocations: 2379)
+
+
+Started GET "/" for ::1 at 2022-04-24 21:36:36 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/djones/altCademy/Ruby/fswd-todolist/public/packs
+[Webpacker] warning ../package.json: No license field
+
+[Webpacker] Hash: 5e79586022670033b93b
+Version: webpack 4.46.0
+Time: 6891ms
+Built at: 04/24/2022 9:36:45 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-5c3c803a1660e7dca552.js   1.09 MiB  application  [emitted] [immutable]  application
+js/application-5c3c803a1660e7dca552.js.map   1.18 MiB  application  [emitted] [dev]        application
+          js/index-7ec2a93f016a10df8d37.js    320 KiB        index  [emitted] [immutable]  index
+      js/index-7ec2a93f016a10df8d37.js.map    375 KiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-5c3c803a1660e7dca552.js js/application-5c3c803a1660e7dca552.js.map
+Entrypoint index = js/index-7ec2a93f016a10df8d37.js js/index-7ec2a93f016a10df8d37.js.map
+[0] multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss 40 bytes {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 537 bytes {application} [built]
+[./app/javascript/packs/application.scss] 664 bytes {application} [built]
+[./app/javascript/packs/index.js] 19 bytes {index} [built]
+[./app/javascript/src/index.js] 1.04 KiB {index} [built]
+[./app/javascript/src/requests.js] 1.33 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss 744 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {index} [built]
+    + 7 hidden modules
+
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 9924.9ms | Allocations: 3372)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9934.7ms | Allocations: 6848)
+Completed 200 OK in 9937ms (Views: 9936.1ms | ActiveRecord: 0.0ms | Allocations: 7293)
+
+
+Started GET "/api/tasks?api_key=[FILTERED]" for ::1 at 2022-04-24 21:36:46 -0700
+Processing by Api::TasksController#index as */*
+  Parameters: {"api_key"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:14:in `index'
+  Rendering api/tasks/index.jbuilder
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/api/tasks/index.jbuilder:2
+  Rendered api/tasks/index.jbuilder (Duration: 5.4ms | Allocations: 1052)
+Completed 200 OK in 14ms (Views: 6.3ms | ActiveRecord: 0.5ms | Allocations: 2526)
+
+
+Started PUT "/api/tasks/28/mark_complete?api_key=[FILTERED]" for ::1 at 2022-04-24 21:36:50 -0700
+Processing by Api::TasksController#mark_complete as */*
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"28"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:46:in `mark_complete'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:47:in `mark_complete'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.2ms | Allocations: 132)
+Completed 200 OK in 7ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 2359)
+
+
+Started GET "/" for ::1 at 2022-04-24 21:36:52 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 2164)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 5656)
+Completed 200 OK in 17ms (Views: 16.7ms | ActiveRecord: 0.0ms | Allocations: 6102)
+
+
+Started GET "/api/tasks?api_key=[FILTERED]" for ::1 at 2022-04-24 21:36:53 -0700
+Processing by Api::TasksController#index as */*
+  Parameters: {"api_key"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:14:in `index'
+  Rendering api/tasks/index.jbuilder
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/api/tasks/index.jbuilder:2
+  Rendered api/tasks/index.jbuilder (Duration: 4.1ms | Allocations: 1052)
+Completed 200 OK in 207ms (Views: 5.5ms | ActiveRecord: 0.7ms | Allocations: 2525)
+
+
+Started PUT "/api/tasks/28/mark_complete?api_key=[FILTERED]" for ::1 at 2022-04-24 21:36:56 -0700
+Processing by Api::TasksController#mark_complete as */*
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"28"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:46:in `mark_complete'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:47:in `mark_complete'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.2ms | Allocations: 132)
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 2359)
+
+
+Started GET "/" for ::1 at 2022-04-24 21:36:57 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2164)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 5640)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 6085)
+
+
+Started GET "/api/tasks?api_key=[FILTERED]" for ::1 at 2022-04-24 21:36:57 -0700
+Processing by Api::TasksController#index as */*
+  Parameters: {"api_key"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:14:in `index'
+  Rendering api/tasks/index.jbuilder
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/api/tasks/index.jbuilder:2
+  Rendered api/tasks/index.jbuilder (Duration: 1.8ms | Allocations: 1052)
+Completed 200 OK in 8ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 2524)
+
+
+Started DELETE "/api/tasks/28?api_key=[FILTERED]" for ::1 at 2022-04-24 21:37:11 -0700
+Processing by Api::TasksController#destroy as */*
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"28"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:28:in `destroy'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:29:in `destroy'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:32:in `destroy'
+  [1m[36mTask Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 28]]
+  ↳ app/controllers/api/tasks_controller.rb:32:in `destroy'
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:32:in `destroy'
+Completed 200 OK in 16ms (Views: 0.3ms | ActiveRecord: 7.5ms | Allocations: 3445)
+
+
+Started GET "/" for ::1 at 2022-04-24 21:37:15 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 2614)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.6ms | Allocations: 6624)
+Completed 200 OK in 23ms (Views: 22.9ms | ActiveRecord: 0.0ms | Allocations: 7114)
+
+
+Started POST "/api/tasks?api_key=[FILTERED]" for ::1 at 2022-04-24 21:37:15 -0700
+Processing by Api::TasksController#create as */*
+  Parameters: {"task"=>{"content"=>"New"}, "api_key"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:23:in `create'
+  [1m[36mTask Create (4.9ms)[0m  [1m[32mINSERT INTO "tasks" ("user_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["content", "New"], ["created_at", "2022-04-25 04:37:15.536015"], ["updated_at", "2022-04-25 04:37:15.536015"]]
+  ↳ app/controllers/api/tasks_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:23:in `create'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.4ms | Allocations: 166)
+Completed 200 OK in 56ms (Views: 8.7ms | ActiveRecord: 8.4ms | Allocations: 4099)
+
+
+Started GET "/api/tasks?api_key=[FILTERED]" for ::1 at 2022-04-24 21:37:15 -0700
+Processing by Api::TasksController#index as */*
+  Parameters: {"api_key"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:14:in `index'
+  Rendering api/tasks/index.jbuilder
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/api/tasks/index.jbuilder:2
+  Rendered api/tasks/index.jbuilder (Duration: 27.0ms | Allocations: 1242)
+Completed 200 OK in 34ms (Views: 27.5ms | ActiveRecord: 1.1ms | Allocations: 2716)
+
+
+Started PUT "/api/tasks/29/mark_complete?api_key=[FILTERED]" for ::1 at 2022-04-24 21:37:17 -0700
+Processing by Api::TasksController#mark_complete as */*
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"29"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:46:in `mark_complete'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:47:in `mark_complete'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:50:in `mark_complete'
+  [1m[36mTask Update (0.7ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", 1], ["updated_at", "2022-04-25 04:37:17.103882"], ["id", 29]]
+  ↳ app/controllers/api/tasks_controller.rb:50:in `mark_complete'
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:50:in `mark_complete'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.2ms | Allocations: 132)
+Completed 200 OK in 16ms (Views: 1.0ms | ActiveRecord: 7.5ms | Allocations: 4155)
+
+
+Started GET "/" for ::1 at 2022-04-24 21:37:18 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2195)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 5702)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 6148)
+
+
+Started GET "/api/tasks?api_key=[FILTERED]" for ::1 at 2022-04-24 21:37:18 -0700
+Processing by Api::TasksController#index as */*
+  Parameters: {"api_key"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:14:in `index'
+  Rendering api/tasks/index.jbuilder
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/api/tasks/index.jbuilder:2
+  Rendered api/tasks/index.jbuilder (Duration: 2.9ms | Allocations: 1052)
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 0.4ms | Allocations: 2522)
+
+
+Started GET "/" for ::1 at 2022-04-24 21:42:02 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/djones/altCademy/Ruby/fswd-todolist/public/packs
+[Webpacker] warning ../package.json: No license field
+
+[Webpacker] Hash: 45a9ab7fc11bc0791179
+Version: webpack 4.46.0
+Time: 6926ms
+Built at: 04/24/2022 9:42:12 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-5c3c803a1660e7dca552.js   1.09 MiB  application  [emitted] [immutable]  application
+js/application-5c3c803a1660e7dca552.js.map   1.18 MiB  application  [emitted] [dev]        application
+          js/index-01c3d8bd1c0d899ee72e.js    320 KiB        index  [emitted] [immutable]  index
+      js/index-01c3d8bd1c0d899ee72e.js.map    375 KiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-5c3c803a1660e7dca552.js js/application-5c3c803a1660e7dca552.js.map
+Entrypoint index = js/index-01c3d8bd1c0d899ee72e.js js/index-01c3d8bd1c0d899ee72e.js.map
+[0] multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss 40 bytes {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 537 bytes {application} [built]
+[./app/javascript/packs/application.scss] 664 bytes {application} [built]
+[./app/javascript/packs/index.js] 19 bytes {index} [built]
+[./app/javascript/src/index.js] 1.15 KiB {index} [built]
+[./app/javascript/src/requests.js] 1.33 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss 744 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {index} [built]
+    + 7 hidden modules
+
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 10038.6ms | Allocations: 3397)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10051.2ms | Allocations: 6873)
+Completed 200 OK in 10060ms (Views: 10054.5ms | ActiveRecord: 0.0ms | Allocations: 7318)
+
+
+Started GET "/api/tasks?api_key=[FILTERED]" for ::1 at 2022-04-24 21:42:13 -0700
+Processing by Api::TasksController#index as */*
+  Parameters: {"api_key"=>"[FILTERED]"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:14:in `index'
+  Rendering api/tasks/index.jbuilder
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/api/tasks/index.jbuilder:2
+  Rendered api/tasks/index.jbuilder (Duration: 7.4ms | Allocations: 1179)
+Completed 200 OK in 26ms (Views: 11.7ms | ActiveRecord: 0.9ms | Allocations: 3506)
+
+
+Started GET "/" for ::1 at 2022-04-24 21:43:10 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/djones/altCademy/Ruby/fswd-todolist/public/packs
+[Webpacker] warning ../package.json: No license field
+
+[Webpacker] Hash: f0fe20a0478692712624
+Version: webpack 4.46.0
+Time: 6962ms
+Built at: 04/24/2022 9:43:20 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-5c3c803a1660e7dca552.js   1.09 MiB  application  [emitted] [immutable]  application
+js/application-5c3c803a1660e7dca552.js.map   1.18 MiB  application  [emitted] [dev]        application
+          js/index-bd25447d608b76dfa9b4.js    320 KiB        index  [emitted] [immutable]  index
+      js/index-bd25447d608b76dfa9b4.js.map    375 KiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-5c3c803a1660e7dca552.js js/application-5c3c803a1660e7dca552.js.map
+Entrypoint index = js/index-bd25447d608b76dfa9b4.js js/index-bd25447d608b76dfa9b4.js.map
+[0] multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss 40 bytes {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 537 bytes {application} [built]
+[./app/javascript/packs/application.scss] 664 bytes {application} [built]
+[./app/javascript/packs/index.js] 19 bytes {index} [built]
+[./app/javascript/src/index.js] 1.15 KiB {index} [built]
+[./app/javascript/src/requests.js] 1.33 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss 744 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {index} [built]
+    + 7 hidden modules
+
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 10084.6ms | Allocations: 3372)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10091.3ms | Allocations: 6848)
+Completed 200 OK in 10093ms (Views: 10092.0ms | ActiveRecord: 0.0ms | Allocations: 7293)
+
+
+Started GET "/api/tasks?api_key=[FILTERED]" for ::1 at 2022-04-24 21:43:21 -0700
+Processing by Api::TasksController#index as */*
+  Parameters: {"api_key"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:14:in `index'
+  Rendering api/tasks/index.jbuilder
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/api/tasks/index.jbuilder:2
+  Rendered api/tasks/index.jbuilder (Duration: 2.7ms | Allocations: 1052)
+Completed 200 OK in 8ms (Views: 3.3ms | ActiveRecord: 0.5ms | Allocations: 2524)
+
+
+Started GET "/" for ::1 at 2022-04-24 21:44:00 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/djones/altCademy/Ruby/fswd-todolist/public/packs
+[Webpacker] warning ../package.json: No license field
+
+[Webpacker] Hash: 3bd6a6be72b9d8b102d6
+Version: webpack 4.46.0
+Time: 6921ms
+Built at: 04/24/2022 9:44:10 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-5c3c803a1660e7dca552.js   1.09 MiB  application  [emitted] [immutable]  application
+js/application-5c3c803a1660e7dca552.js.map   1.18 MiB  application  [emitted] [dev]        application
+          js/index-cf222c749ecc71322627.js    320 KiB        index  [emitted] [immutable]  index
+      js/index-cf222c749ecc71322627.js.map    375 KiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-5c3c803a1660e7dca552.js js/application-5c3c803a1660e7dca552.js.map
+Entrypoint index = js/index-cf222c749ecc71322627.js js/index-cf222c749ecc71322627.js.map
+[0] multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss 40 bytes {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 537 bytes {application} [built]
+[./app/javascript/packs/application.scss] 664 bytes {application} [built]
+[./app/javascript/packs/index.js] 19 bytes {index} [built]
+[./app/javascript/src/index.js] 1.15 KiB {index} [built]
+[./app/javascript/src/requests.js] 1.33 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss 744 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {index} [built]
+    + 7 hidden modules
+
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 9976.0ms | Allocations: 3372)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9983.0ms | Allocations: 6862)
+Completed 200 OK in 9985ms (Views: 9983.6ms | ActiveRecord: 0.0ms | Allocations: 7309)
+
+
+Started GET "/api/tasks?api_key=[FILTERED]" for ::1 at 2022-04-24 21:44:10 -0700
+Processing by Api::TasksController#index as */*
+  Parameters: {"api_key"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:14:in `index'
+  Rendering api/tasks/index.jbuilder
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/api/tasks/index.jbuilder:2
+  Rendered api/tasks/index.jbuilder (Duration: 4.5ms | Allocations: 1052)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 0.4ms | Allocations: 2521)
+
+
+Started GET "/" for ::1 at 2022-04-24 21:44:33 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/djones/altCademy/Ruby/fswd-todolist/public/packs
+[Webpacker] warning ../package.json: No license field
+
+[Webpacker] Hash: a39e69a288c1db170bd5
+Version: webpack 4.46.0
+Time: 7277ms
+Built at: 04/24/2022 9:44:43 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-5c3c803a1660e7dca552.js   1.09 MiB  application  [emitted] [immutable]  application
+js/application-5c3c803a1660e7dca552.js.map   1.18 MiB  application  [emitted] [dev]        application
+          js/index-960591922090fb96d338.js    320 KiB        index  [emitted] [immutable]  index
+      js/index-960591922090fb96d338.js.map    375 KiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-5c3c803a1660e7dca552.js js/application-5c3c803a1660e7dca552.js.map
+Entrypoint index = js/index-960591922090fb96d338.js js/index-960591922090fb96d338.js.map
+[0] multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss 40 bytes {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 537 bytes {application} [built]
+[./app/javascript/packs/application.scss] 664 bytes {application} [built]
+[./app/javascript/packs/index.js] 19 bytes {index} [built]
+[./app/javascript/src/index.js] 1.13 KiB {index} [built]
+[./app/javascript/src/requests.js] 1.33 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss 744 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {index} [built]
+    + 7 hidden modules
+
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 10106.3ms | Allocations: 3372)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10113.0ms | Allocations: 6848)
+Completed 200 OK in 10114ms (Views: 10113.5ms | ActiveRecord: 0.0ms | Allocations: 7294)
+
+
+Started GET "/api/tasks?api_key=[FILTERED]" for ::1 at 2022-04-24 21:44:44 -0700
+Processing by Api::TasksController#index as */*
+  Parameters: {"api_key"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:14:in `index'
+  Rendering api/tasks/index.jbuilder
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/api/tasks/index.jbuilder:2
+  Rendered api/tasks/index.jbuilder (Duration: 3.7ms | Allocations: 1056)
+Completed 200 OK in 10ms (Views: 4.7ms | ActiveRecord: 0.6ms | Allocations: 2538)
+
+
+Started GET "/" for ::1 at 2022-04-24 21:45:01 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/djones/altCademy/Ruby/fswd-todolist/public/packs
+[Webpacker] warning ../package.json: No license field
+
+[Webpacker] Hash: 6f33e17bb694379c62f3
+Version: webpack 4.46.0
+Time: 7288ms
+Built at: 04/24/2022 9:45:15 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-5c3c803a1660e7dca552.js   1.09 MiB  application  [emitted] [immutable]  application
+js/application-5c3c803a1660e7dca552.js.map   1.18 MiB  application  [emitted] [dev]        application
+          js/index-8b19f471977b092e61d9.js    320 KiB        index  [emitted] [immutable]  index
+      js/index-8b19f471977b092e61d9.js.map    375 KiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-5c3c803a1660e7dca552.js js/application-5c3c803a1660e7dca552.js.map
+Entrypoint index = js/index-8b19f471977b092e61d9.js js/index-8b19f471977b092e61d9.js.map
+[0] multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss 40 bytes {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 537 bytes {application} [built]
+[./app/javascript/packs/application.scss] 664 bytes {application} [built]
+[./app/javascript/packs/index.js] 19 bytes {index} [built]
+[./app/javascript/src/index.js] 1.13 KiB {index} [built]
+[./app/javascript/src/requests.js] 1.33 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss 744 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {index} [built]
+    + 7 hidden modules
+
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 13773.9ms | Allocations: 3452)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13781.2ms | Allocations: 6928)
+Completed 200 OK in 13782ms (Views: 13781.6ms | ActiveRecord: 0.0ms | Allocations: 7374)
+
+
+Started GET "/api/tasks?api_key=[FILTERED]" for ::1 at 2022-04-24 21:45:16 -0700
+Processing by Api::TasksController#index as */*
+  Parameters: {"api_key"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:14:in `index'
+  Rendering api/tasks/index.jbuilder
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/api/tasks/index.jbuilder:2
+  Rendered api/tasks/index.jbuilder (Duration: 2.2ms | Allocations: 1052)
+Completed 200 OK in 168ms (Views: 162.0ms | ActiveRecord: 0.5ms | Allocations: 2521)
+
+
+Started GET "/" for ::1 at 2022-04-24 21:45:51 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/djones/altCademy/Ruby/fswd-todolist/public/packs
+[Webpacker] warning ../package.json: No license field
+
+[Webpacker] Hash: c1d35b5b9ced9db42847
+Version: webpack 4.46.0
+Time: 14216ms
+Built at: 04/24/2022 9:46:10 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-5c3c803a1660e7dca552.js   1.09 MiB  application  [emitted] [immutable]  application
+js/application-5c3c803a1660e7dca552.js.map   1.18 MiB  application  [emitted] [dev]        application
+          js/index-e4ccf434e30e367dd887.js    320 KiB        index  [emitted] [immutable]  index
+      js/index-e4ccf434e30e367dd887.js.map    375 KiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-5c3c803a1660e7dca552.js js/application-5c3c803a1660e7dca552.js.map
+Entrypoint index = js/index-e4ccf434e30e367dd887.js js/index-e4ccf434e30e367dd887.js.map
+[0] multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss 40 bytes {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 537 bytes {application} [built]
+[./app/javascript/packs/application.scss] 664 bytes {application} [built]
+[./app/javascript/packs/index.js] 19 bytes {index} [built]
+[./app/javascript/src/index.js] 1.15 KiB {index} [built]
+[./app/javascript/src/requests.js] 1.33 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss 744 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {index} [built]
+    + 7 hidden modules
+
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 19054.8ms | Allocations: 3404)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19061.9ms | Allocations: 6894)
+Completed 200 OK in 19063ms (Views: 19062.5ms | ActiveRecord: 0.0ms | Allocations: 7340)
+
+
+Started GET "/api/tasks?api_key=[FILTERED]" for ::1 at 2022-04-24 21:46:10 -0700
+Processing by Api::TasksController#index as */*
+  Parameters: {"api_key"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:14:in `index'
+  Rendering api/tasks/index.jbuilder
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/api/tasks/index.jbuilder:2
+  Rendered api/tasks/index.jbuilder (Duration: 1.8ms | Allocations: 1052)
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 2524)
+
+
