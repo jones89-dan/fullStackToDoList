@@ -6,6 +6,7 @@ import {
   createTask,
   deleteTask,
   completeTask,
+  activateTask
 } from "./requests.js";
 
   indexTasks(function (response) {
@@ -25,7 +26,6 @@ import {
     });
 
 
-
   $('.delete').click(function(e){
     var id = $(e.target).parent().attr("data-id");
     deleteTask(id);
@@ -36,8 +36,16 @@ import {
   $('.complete').click(function(e){
     var id = $(e.target).parent().attr("data-id");
     completeTask(id);
-      $(this).parent().toggleClass("green");
+      $(this).parent().addClass("green");
 
   });
+
+  $('.activate').click(function(e){
+    var id = $(e.target).parent().attr("data-id");
+    activateTask(id);
+    $(this).parent().removeClass("green");
+  });
+
+
 
 });

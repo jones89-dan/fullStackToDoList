@@ -60,4 +60,18 @@ export var completeTask = function (id) {
   });
 }
 
+export var activateTask = function (id) {
+ $.ajax({
+   type: 'PUT',
+   url: 'api/tasks/' + id + '/mark_active?api_key=1',
+   dataType: 'json',
+   success: function (response, textStatus) {
+   console.log("task activated");
+   },
+   error: function (request, textStatus, errorMessage) {
+     console.log(errorMessage);
+   }
+ });
+}
+
 console.log('ajax requests');

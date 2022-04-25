@@ -15169,3 +15169,952 @@ Processing by Api::TasksController#index as */*
 Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 2524)
 
 
+Started GET "/" for ::1 at 2022-04-24 21:53:25 -0700
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/djones/altCademy/Ruby/fswd-todolist/public/packs
+[Webpacker] warning ../package.json: No license field
+
+[Webpacker] Hash: 344786fa0edab18b619a
+Version: webpack 4.46.0
+Time: 7832ms
+Built at: 04/24/2022 9:53:36 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-5c3c803a1660e7dca552.js   1.09 MiB  application  [emitted] [immutable]  application
+js/application-5c3c803a1660e7dca552.js.map   1.18 MiB  application  [emitted] [dev]        application
+          js/index-e364bd3bda919001bbb8.js    321 KiB        index  [emitted] [immutable]  index
+      js/index-e364bd3bda919001bbb8.js.map    375 KiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-5c3c803a1660e7dca552.js js/application-5c3c803a1660e7dca552.js.map
+Entrypoint index = js/index-e364bd3bda919001bbb8.js js/index-e364bd3bda919001bbb8.js.map
+[0] multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss 40 bytes {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 537 bytes {application} [built]
+[./app/javascript/packs/application.scss] 664 bytes {application} [built]
+[./app/javascript/packs/index.js] 19 bytes {index} [built]
+[./app/javascript/src/index.js] 1.32 KiB {index} [built]
+[./app/javascript/src/requests.js] 1.69 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss 744 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {index} [built]
+    + 7 hidden modules
+
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 10957.7ms | Allocations: 4145)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10975.8ms | Allocations: 10822)
+Completed 200 OK in 11018ms (Views: 10982.1ms | ActiveRecord: 0.0ms | Allocations: 14649)
+
+
+Started GET "/api/tasks?api_key=[FILTERED]" for ::1 at 2022-04-24 21:53:37 -0700
+Processing by Api::TasksController#index as */*
+  Parameters: {"api_key"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:14:in `index'
+  Rendering api/tasks/index.jbuilder
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/api/tasks/index.jbuilder:2
+  Rendered api/tasks/index.jbuilder (Duration: 14.7ms | Allocations: 5449)
+Completed 200 OK in 52ms (Views: 20.7ms | ActiveRecord: 3.6ms | Allocations: 18182)
+
+
+Started GET "/" for ::1 at 2022-04-24 21:53:59 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/djones/altCademy/Ruby/fswd-todolist/public/packs
+[Webpacker] warning ../package.json: No license field
+
+[Webpacker] Hash: 63f6c071a7312bcc8331
+Version: webpack 4.46.0
+Time: 6765ms
+Built at: 04/24/2022 9:54:07 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-5c3c803a1660e7dca552.js   1.09 MiB  application  [emitted] [immutable]  application
+js/application-5c3c803a1660e7dca552.js.map   1.18 MiB  application  [emitted] [dev]        application
+          js/index-8be8f6b86be5e8cee98f.js    321 KiB        index  [emitted] [immutable]  index
+      js/index-8be8f6b86be5e8cee98f.js.map    375 KiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-5c3c803a1660e7dca552.js js/application-5c3c803a1660e7dca552.js.map
+Entrypoint index = js/index-8be8f6b86be5e8cee98f.js js/index-8be8f6b86be5e8cee98f.js.map
+[0] multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss 40 bytes {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 537 bytes {application} [built]
+[./app/javascript/packs/application.scss] 664 bytes {application} [built]
+[./app/javascript/packs/index.js] 19 bytes {index} [built]
+[./app/javascript/src/index.js] 1.32 KiB {index} [built]
+[./app/javascript/src/requests.js] 1.69 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss 744 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {index} [built]
+    + 7 hidden modules
+
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 9091.8ms | Allocations: 3446)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9098.9ms | Allocations: 7019)
+Completed 200 OK in 9100ms (Views: 9099.7ms | ActiveRecord: 0.0ms | Allocations: 7542)
+
+
+Started GET "/api/tasks?api_key=[FILTERED]" for ::1 at 2022-04-24 21:54:08 -0700
+Processing by Api::TasksController#index as */*
+  Parameters: {"api_key"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:14:in `index'
+  Rendering api/tasks/index.jbuilder
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/api/tasks/index.jbuilder:2
+  Rendered api/tasks/index.jbuilder (Duration: 2.7ms | Allocations: 1085)
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 1.0ms | Allocations: 2691)
+
+
+Started PUT "/api/tasks/29/mark_active?api_key=[FILTERED]" for ::1 at 2022-04-24 21:54:10 -0700
+Processing by Api::TasksController#mark_active as JSON
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"29"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:55:in `mark_active'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:56:in `mark_active'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:59:in `mark_active'
+  [1m[36mTask Update (0.5ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", 0], ["updated_at", "2022-04-25 04:54:10.823433"], ["id", 29]]
+  ↳ app/controllers/api/tasks_controller.rb:59:in `mark_active'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:59:in `mark_active'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.9ms | Allocations: 211)
+Completed 200 OK in 12ms (Views: 2.2ms | ActiveRecord: 1.7ms | Allocations: 5051)
+
+
+Started GET "/" for ::1 at 2022-04-24 21:55:07 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/djones/altCademy/Ruby/fswd-todolist/public/packs
+[Webpacker] warning ../package.json: No license field
+
+[Webpacker] Hash: ba0d0f5c9d261f080dcf
+Version: webpack 4.46.0
+Time: 7051ms
+Built at: 04/24/2022 9:55:17 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-5c3c803a1660e7dca552.js   1.09 MiB  application  [emitted] [immutable]  application
+js/application-5c3c803a1660e7dca552.js.map   1.18 MiB  application  [emitted] [dev]        application
+          js/index-c39fcfefc0ff7e601e92.js    321 KiB        index  [emitted] [immutable]  index
+      js/index-c39fcfefc0ff7e601e92.js.map    375 KiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-5c3c803a1660e7dca552.js js/application-5c3c803a1660e7dca552.js.map
+Entrypoint index = js/index-c39fcfefc0ff7e601e92.js js/index-c39fcfefc0ff7e601e92.js.map
+[0] multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss 40 bytes {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 537 bytes {application} [built]
+[./app/javascript/packs/application.scss] 664 bytes {application} [built]
+[./app/javascript/packs/index.js] 19 bytes {index} [built]
+[./app/javascript/src/index.js] 1.32 KiB {index} [built]
+[./app/javascript/src/requests.js] 1.69 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss 744 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {index} [built]
+    + 7 hidden modules
+
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 10313.3ms | Allocations: 3373)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10319.5ms | Allocations: 6851)
+Completed 200 OK in 10321ms (Views: 10320.1ms | ActiveRecord: 0.0ms | Allocations: 7301)
+
+
+Started GET "/api/tasks?api_key=[FILTERED]" for ::1 at 2022-04-24 21:55:17 -0700
+Processing by Api::TasksController#index as */*
+  Parameters: {"api_key"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:14:in `index'
+  Rendering api/tasks/index.jbuilder
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/api/tasks/index.jbuilder:2
+  Rendered api/tasks/index.jbuilder (Duration: 2.4ms | Allocations: 1052)
+Completed 200 OK in 7ms (Views: 2.9ms | ActiveRecord: 0.5ms | Allocations: 2522)
+
+
+Started PUT "/api/tasks/29/mark_complete?api_key=[FILTERED]" for ::1 at 2022-04-24 21:55:20 -0700
+Processing by Api::TasksController#mark_complete as */*
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"29"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:46:in `mark_complete'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:47:in `mark_complete'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:50:in `mark_complete'
+  [1m[36mTask Update (0.5ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", 1], ["updated_at", "2022-04-25 04:55:20.477997"], ["id", 29]]
+  ↳ app/controllers/api/tasks_controller.rb:50:in `mark_complete'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:50:in `mark_complete'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.2ms | Allocations: 132)
+Completed 200 OK in 23ms (Views: 1.3ms | ActiveRecord: 3.5ms | Allocations: 4174)
+
+
+Started PUT "/api/tasks/29/mark_complete?api_key=[FILTERED]" for ::1 at 2022-04-24 21:55:21 -0700
+Processing by Api::TasksController#mark_complete as */*
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"29"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:46:in `mark_complete'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:47:in `mark_complete'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.2ms | Allocations: 132)
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 2370)
+
+
+Started PUT "/api/tasks/29/mark_complete?api_key=[FILTERED]" for ::1 at 2022-04-24 21:55:22 -0700
+Processing by Api::TasksController#mark_complete as */*
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"29"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:46:in `mark_complete'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:47:in `mark_complete'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.6ms | Allocations: 133)
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 0.3ms | Allocations: 2384)
+
+
+Started PUT "/api/tasks/29/mark_active?api_key=[FILTERED]" for ::1 at 2022-04-24 21:55:23 -0700
+Processing by Api::TasksController#mark_active as JSON
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"29"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:55:in `mark_active'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:56:in `mark_active'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:59:in `mark_active'
+  [1m[36mTask Update (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", 0], ["updated_at", "2022-04-25 04:55:23.430753"], ["id", 29]]
+  ↳ app/controllers/api/tasks_controller.rb:59:in `mark_active'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:59:in `mark_active'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.3ms | Allocations: 132)
+Completed 200 OK in 12ms (Views: 1.0ms | ActiveRecord: 3.8ms | Allocations: 4054)
+
+
+Started PUT "/api/tasks/29/mark_complete?api_key=[FILTERED]" for ::1 at 2022-04-24 21:55:24 -0700
+Processing by Api::TasksController#mark_complete as */*
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"29"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:46:in `mark_complete'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:47:in `mark_complete'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:50:in `mark_complete'
+  [1m[36mTask Update (0.7ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", 1], ["updated_at", "2022-04-25 04:55:24.668069"], ["id", 29]]
+  ↳ app/controllers/api/tasks_controller.rb:50:in `mark_complete'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:50:in `mark_complete'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.2ms | Allocations: 132)
+Completed 200 OK in 10ms (Views: 0.8ms | ActiveRecord: 3.3ms | Allocations: 4038)
+
+
+Started PUT "/api/tasks/29/mark_active?api_key=[FILTERED]" for ::1 at 2022-04-24 21:55:25 -0700
+Processing by Api::TasksController#mark_active as JSON
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"29"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:55:in `mark_active'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:56:in `mark_active'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:59:in `mark_active'
+  [1m[36mTask Update (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", 0], ["updated_at", "2022-04-25 04:55:25.676651"], ["id", 29]]
+  ↳ app/controllers/api/tasks_controller.rb:59:in `mark_active'
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:59:in `mark_active'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.2ms | Allocations: 132)
+Completed 200 OK in 16ms (Views: 0.8ms | ActiveRecord: 6.8ms | Allocations: 4032)
+
+
+Started PUT "/api/tasks/29/mark_active?api_key=[FILTERED]" for ::1 at 2022-04-24 21:55:26 -0700
+Processing by Api::TasksController#mark_active as JSON
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"29"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:55:in `mark_active'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:56:in `mark_active'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.2ms | Allocations: 132)
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 2357)
+
+
+Started PUT "/api/tasks/29/mark_active?api_key=[FILTERED]" for ::1 at 2022-04-24 21:55:26 -0700
+Processing by Api::TasksController#mark_active as JSON
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"29"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:55:in `mark_active'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:56:in `mark_active'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.3ms | Allocations: 132)
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 0.3ms | Allocations: 2360)
+
+
+Started PUT "/api/tasks/29/mark_complete?api_key=[FILTERED]" for ::1 at 2022-04-24 21:55:28 -0700
+Processing by Api::TasksController#mark_complete as */*
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"29"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:46:in `mark_complete'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:47:in `mark_complete'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:50:in `mark_complete'
+  [1m[36mTask Update (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", 1], ["updated_at", "2022-04-25 04:55:28.452143"], ["id", 29]]
+  ↳ app/controllers/api/tasks_controller.rb:50:in `mark_complete'
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:50:in `mark_complete'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.2ms | Allocations: 132)
+Completed 200 OK in 15ms (Views: 0.8ms | ActiveRecord: 7.0ms | Allocations: 4035)
+
+
+Started PUT "/api/tasks/29/mark_active?api_key=[FILTERED]" for ::1 at 2022-04-24 21:55:32 -0700
+Processing by Api::TasksController#mark_active as JSON
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"29"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:55:in `mark_active'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:56:in `mark_active'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:59:in `mark_active'
+  [1m[36mTask Update (0.6ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", 0], ["updated_at", "2022-04-25 04:55:32.501900"], ["id", 29]]
+  ↳ app/controllers/api/tasks_controller.rb:59:in `mark_active'
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:59:in `mark_active'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.2ms | Allocations: 132)
+Completed 200 OK in 14ms (Views: 0.7ms | ActiveRecord: 7.1ms | Allocations: 4032)
+
+
+Started PUT "/api/tasks/2/mark_complete?api_key=[FILTERED]" for ::1 at 2022-04-24 21:55:35 -0700
+Processing by Api::TasksController#mark_complete as */*
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:46:in `mark_complete'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:47:in `mark_complete'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:50:in `mark_complete'
+  [1m[36mTask Update (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", 1], ["updated_at", "2022-04-25 04:55:35.951306"], ["id", 2]]
+  ↳ app/controllers/api/tasks_controller.rb:50:in `mark_complete'
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:50:in `mark_complete'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.2ms | Allocations: 141)
+Completed 200 OK in 14ms (Views: 0.8ms | ActiveRecord: 6.8ms | Allocations: 4060)
+
+
+Started PUT "/api/tasks/2/mark_complete?api_key=[FILTERED]" for ::1 at 2022-04-24 21:55:36 -0700
+Processing by Api::TasksController#mark_complete as */*
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:46:in `mark_complete'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:47:in `mark_complete'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.2ms | Allocations: 141)
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 2386)
+
+
+Started PUT "/api/tasks/2/mark_active?api_key=[FILTERED]" for ::1 at 2022-04-24 21:55:37 -0700
+Processing by Api::TasksController#mark_active as JSON
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:55:in `mark_active'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:56:in `mark_active'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:59:in `mark_active'
+  [1m[36mTask Update (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", 0], ["updated_at", "2022-04-25 04:55:37.180037"], ["id", 2]]
+  ↳ app/controllers/api/tasks_controller.rb:59:in `mark_active'
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:59:in `mark_active'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.3ms | Allocations: 141)
+Completed 200 OK in 17ms (Views: 3.2ms | ActiveRecord: 7.0ms | Allocations: 4062)
+
+
+Started PUT "/api/tasks/2/mark_active?api_key=[FILTERED]" for ::1 at 2022-04-24 21:55:37 -0700
+Processing by Api::TasksController#mark_active as JSON
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:55:in `mark_active'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:56:in `mark_active'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.2ms | Allocations: 141)
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 2386)
+
+
+Started PUT "/api/tasks/1/mark_complete?api_key=[FILTERED]" for ::1 at 2022-04-24 21:55:39 -0700
+Processing by Api::TasksController#mark_complete as */*
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:46:in `mark_complete'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:47:in `mark_complete'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:50:in `mark_complete'
+  [1m[36mTask Update (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", 1], ["updated_at", "2022-04-25 04:55:39.550158"], ["id", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:50:in `mark_complete'
+  [1m[36mTRANSACTION (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:50:in `mark_complete'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.4ms | Allocations: 141)
+Completed 200 OK in 16ms (Views: 1.6ms | ActiveRecord: 7.3ms | Allocations: 4062)
+
+
+Started PUT "/api/tasks/1/mark_complete?api_key=[FILTERED]" for ::1 at 2022-04-24 21:55:40 -0700
+Processing by Api::TasksController#mark_complete as */*
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:46:in `mark_complete'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:47:in `mark_complete'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.2ms | Allocations: 141)
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 2386)
+
+
+Started PUT "/api/tasks/1/mark_active?api_key=[FILTERED]" for ::1 at 2022-04-24 21:55:40 -0700
+Processing by Api::TasksController#mark_active as JSON
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:55:in `mark_active'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:56:in `mark_active'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:59:in `mark_active'
+  [1m[36mTask Update (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", 0], ["updated_at", "2022-04-25 04:55:40.844094"], ["id", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:59:in `mark_active'
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:59:in `mark_active'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.4ms | Allocations: 141)
+Completed 200 OK in 12ms (Views: 1.0ms | ActiveRecord: 3.9ms | Allocations: 4061)
+
+
+Started PUT "/api/tasks/1/mark_active?api_key=[FILTERED]" for ::1 at 2022-04-24 21:55:41 -0700
+Processing by Api::TasksController#mark_active as JSON
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:55:in `mark_active'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:56:in `mark_active'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.2ms | Allocations: 141)
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 2385)
+
+
+Started GET "/" for ::1 at 2022-04-24 21:55:51 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 2693)
+Started POST "/api/tasks?api_key=[FILTERED]" for ::1 at 2022-04-24 21:55:51 -0700
+Processing by Api::TasksController#create as */*
+  Parameters: {"task"=>{"content"=>"Read"}, "api_key"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:23:in `create'
+  [1m[36mTask Create (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("user_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["content", "Read"], ["created_at", "2022-04-25 04:55:51.998772"], ["updated_at", "2022-04-25 04:55:51.998772"]]
+[Webpacker] Everything's up-to-date. Nothing to do
+  ↳ app/controllers/api/tasks_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendered layout layouts/application.html.erb (Duration: 37.7ms | Allocations: 12179)
+  ↳ app/controllers/api/tasks_controller.rb:23:in `create'
+  Rendering api/tasks/show.jbuilder
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.0ms | Allocations: 13028)
+
+
+  Rendered api/tasks/show.jbuilder (Duration: 0.2ms | Allocations: 165)
+Completed 200 OK in 11ms (Views: 1.4ms | ActiveRecord: 1.5ms | Allocations: 5193)
+
+
+Started GET "/api/tasks?api_key=[FILTERED]" for ::1 at 2022-04-24 21:55:52 -0700
+Processing by Api::TasksController#index as */*
+  Parameters: {"api_key"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:14:in `index'
+  Rendering api/tasks/index.jbuilder
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/api/tasks/index.jbuilder:2
+  Rendered api/tasks/index.jbuilder (Duration: 3.4ms | Allocations: 1217)
+Completed 200 OK in 8ms (Views: 3.9ms | ActiveRecord: 0.4ms | Allocations: 2688)
+
+
+Started PUT "/api/tasks/30/mark_complete?api_key=[FILTERED]" for ::1 at 2022-04-24 21:55:53 -0700
+Processing by Api::TasksController#mark_complete as */*
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"30"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:46:in `mark_complete'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:47:in `mark_complete'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:50:in `mark_complete'
+  [1m[36mTask Update (0.6ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", 1], ["updated_at", "2022-04-25 04:55:53.765746"], ["id", 30]]
+  ↳ app/controllers/api/tasks_controller.rb:50:in `mark_complete'
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:50:in `mark_complete'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.3ms | Allocations: 132)
+Completed 200 OK in 14ms (Views: 1.0ms | ActiveRecord: 6.3ms | Allocations: 4064)
+
+
+Started PUT "/api/tasks/30/mark_complete?api_key=[FILTERED]" for ::1 at 2022-04-24 21:55:54 -0700
+Processing by Api::TasksController#mark_complete as */*
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"30"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:46:in `mark_complete'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:47:in `mark_complete'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.2ms | Allocations: 132)
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 2358)
+
+
+Started PUT "/api/tasks/30/mark_active?api_key=[FILTERED]" for ::1 at 2022-04-24 21:55:55 -0700
+Processing by Api::TasksController#mark_active as JSON
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"30"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:55:in `mark_active'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:56:in `mark_active'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:59:in `mark_active'
+  [1m[36mTask Update (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", 0], ["updated_at", "2022-04-25 04:55:55.304783"], ["id", 30]]
+  ↳ app/controllers/api/tasks_controller.rb:59:in `mark_active'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:59:in `mark_active'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.3ms | Allocations: 132)
+Completed 200 OK in 13ms (Views: 1.1ms | ActiveRecord: 1.5ms | Allocations: 4038)
+
+
+Started PUT "/api/tasks/30/mark_active?api_key=[FILTERED]" for ::1 at 2022-04-24 21:55:56 -0700
+Processing by Api::TasksController#mark_active as JSON
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"30"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:55:in `mark_active'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:56:in `mark_active'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.2ms | Allocations: 132)
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 2358)
+
+
+Started GET "/" for ::1 at 2022-04-24 21:57:01 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/djones/altCademy/Ruby/fswd-todolist/public/packs
+[Webpacker] warning ../package.json: No license field
+
+[Webpacker] Hash: 702acbfa79f36d969f18
+Version: webpack 4.46.0
+Time: 7103ms
+Built at: 04/24/2022 9:57:11 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-5c3c803a1660e7dca552.js   1.09 MiB  application  [emitted] [immutable]  application
+js/application-5c3c803a1660e7dca552.js.map   1.18 MiB  application  [emitted] [dev]        application
+          js/index-d97096e0412ab85d49ce.js    321 KiB        index  [emitted] [immutable]  index
+      js/index-d97096e0412ab85d49ce.js.map    375 KiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-5c3c803a1660e7dca552.js js/application-5c3c803a1660e7dca552.js.map
+Entrypoint index = js/index-d97096e0412ab85d49ce.js js/index-d97096e0412ab85d49ce.js.map
+[0] multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss 40 bytes {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 537 bytes {application} [built]
+[./app/javascript/packs/application.scss] 664 bytes {application} [built]
+[./app/javascript/packs/index.js] 19 bytes {index} [built]
+[./app/javascript/src/index.js] 1.32 KiB {index} [built]
+[./app/javascript/src/requests.js] 1.69 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss 744 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {index} [built]
+    + 7 hidden modules
+
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 10157.8ms | Allocations: 3407)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10170.0ms | Allocations: 6912)
+Completed 200 OK in 10178ms (Views: 10172.3ms | ActiveRecord: 0.0ms | Allocations: 7358)
+
+
+Started GET "/api/tasks?api_key=[FILTERED]" for ::1 at 2022-04-24 21:57:12 -0700
+Processing by Api::TasksController#index as */*
+  Parameters: {"api_key"=>"[FILTERED]"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:14:in `index'
+  Rendering api/tasks/index.jbuilder
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/api/tasks/index.jbuilder:2
+  Rendered api/tasks/index.jbuilder (Duration: 7.2ms | Allocations: 1188)
+Completed 200 OK in 18ms (Views: 7.8ms | ActiveRecord: 0.9ms | Allocations: 2661)
+
+
+Started PUT "/api/tasks/30/mark_active?api_key=[FILTERED]" for ::1 at 2022-04-24 21:57:14 -0700
+Processing by Api::TasksController#mark_active as JSON
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"30"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:55:in `mark_active'
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:56:in `mark_active'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.2ms | Allocations: 132)
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 2357)
+
+
+Started PUT "/api/tasks/30/mark_active?api_key=[FILTERED]" for ::1 at 2022-04-24 21:57:15 -0700
+Processing by Api::TasksController#mark_active as JSON
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"30"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:55:in `mark_active'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:56:in `mark_active'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.2ms | Allocations: 132)
+Completed 200 OK in 5ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 2359)
+
+
+Started PUT "/api/tasks/30/mark_complete?api_key=[FILTERED]" for ::1 at 2022-04-24 21:57:15 -0700
+Processing by Api::TasksController#mark_complete as */*
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"30"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:46:in `mark_complete'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:47:in `mark_complete'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:50:in `mark_complete'
+  [1m[36mTask Update (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", 1], ["updated_at", "2022-04-25 04:57:15.839656"], ["id", 30]]
+  ↳ app/controllers/api/tasks_controller.rb:50:in `mark_complete'
+  [1m[36mTRANSACTION (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:50:in `mark_complete'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.3ms | Allocations: 132)
+Completed 200 OK in 18ms (Views: 1.1ms | ActiveRecord: 7.5ms | Allocations: 4036)
+
+
+Started PUT "/api/tasks/30/mark_active?api_key=[FILTERED]" for ::1 at 2022-04-24 21:57:16 -0700
+Processing by Api::TasksController#mark_active as JSON
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"30"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:55:in `mark_active'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:56:in `mark_active'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:59:in `mark_active'
+  [1m[36mTask Update (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", 0], ["updated_at", "2022-04-25 04:57:16.719838"], ["id", 30]]
+  ↳ app/controllers/api/tasks_controller.rb:59:in `mark_active'
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:59:in `mark_active'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.3ms | Allocations: 132)
+Completed 200 OK in 17ms (Views: 1.1ms | ActiveRecord: 7.0ms | Allocations: 4032)
+
+
+Started PUT "/api/tasks/30/mark_complete?api_key=[FILTERED]" for ::1 at 2022-04-24 21:57:17 -0700
+Processing by Api::TasksController#mark_complete as */*
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"30"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:46:in `mark_complete'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:47:in `mark_complete'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:50:in `mark_complete'
+  [1m[36mTask Update (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", 1], ["updated_at", "2022-04-25 04:57:17.719556"], ["id", 30]]
+  ↳ app/controllers/api/tasks_controller.rb:50:in `mark_complete'
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:50:in `mark_complete'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.3ms | Allocations: 132)
+Completed 200 OK in 15ms (Views: 1.1ms | ActiveRecord: 3.7ms | Allocations: 4033)
+
+
+Started PUT "/api/tasks/30/mark_active?api_key=[FILTERED]" for ::1 at 2022-04-24 21:57:19 -0700
+Processing by Api::TasksController#mark_active as JSON
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"30"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:55:in `mark_active'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:56:in `mark_active'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:59:in `mark_active'
+  [1m[36mTask Update (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", 0], ["updated_at", "2022-04-25 04:57:19.391500"], ["id", 30]]
+  ↳ app/controllers/api/tasks_controller.rb:59:in `mark_active'
+  [1m[36mTRANSACTION (6.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:59:in `mark_active'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.9ms | Allocations: 132)
+Completed 200 OK in 15ms (Views: 1.4ms | ActiveRecord: 6.8ms | Allocations: 4032)
+
+
+Started GET "/" for ::1 at 2022-04-24 21:57:58 -0700
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/djones/altCademy/Ruby/fswd-todolist/public/packs
+[Webpacker] warning ../package.json: No license field
+
+[Webpacker] Hash: b840f2e330511dfd9254
+Version: webpack 4.46.0
+Time: 7960ms
+Built at: 04/24/2022 9:58:09 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-5c3c803a1660e7dca552.js   1.09 MiB  application  [emitted] [immutable]  application
+js/application-5c3c803a1660e7dca552.js.map   1.18 MiB  application  [emitted] [dev]        application
+          js/index-d224b165ee95fac7024f.js    321 KiB        index  [emitted] [immutable]  index
+      js/index-d224b165ee95fac7024f.js.map    375 KiB        index  [emitted] [dev]        index
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-5c3c803a1660e7dca552.js js/application-5c3c803a1660e7dca552.js.map
+Entrypoint index = js/index-d224b165ee95fac7024f.js js/index-d224b165ee95fac7024f.js.map
+[0] multi ./app/javascript/packs/application.js ./app/javascript/packs/application.scss 40 bytes {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 537 bytes {application} [built]
+[./app/javascript/packs/application.scss] 664 bytes {application} [built]
+[./app/javascript/packs/index.js] 19 bytes {index} [built]
+[./app/javascript/src/index.js] 1.32 KiB {index} [built]
+[./app/javascript/src/requests.js] 1.69 KiB {index} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/application.scss 744 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {index} [built]
+    + 7 hidden modules
+
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 11081.5ms | Allocations: 3376)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11088.1ms | Allocations: 6866)
+Completed 200 OK in 11090ms (Views: 11088.9ms | ActiveRecord: 0.0ms | Allocations: 7313)
+
+
+Started GET "/api/tasks?api_key=[FILTERED]" for ::1 at 2022-04-24 21:58:09 -0700
+Processing by Api::TasksController#index as */*
+  Parameters: {"api_key"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:14:in `index'
+  Rendering api/tasks/index.jbuilder
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/api/tasks/index.jbuilder:2
+  Rendered api/tasks/index.jbuilder (Duration: 3.7ms | Allocations: 1189)
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 0.7ms | Allocations: 2660)
+
+
+Started PUT "/api/tasks/1/mark_active?api_key=[FILTERED]" for ::1 at 2022-04-24 21:58:13 -0700
+Processing by Api::TasksController#mark_active as JSON
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:55:in `mark_active'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:56:in `mark_active'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.2ms | Allocations: 141)
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 2384)
+
+
+Started PUT "/api/tasks/1/mark_active?api_key=[FILTERED]" for ::1 at 2022-04-24 21:58:14 -0700
+Processing by Api::TasksController#mark_active as JSON
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:55:in `mark_active'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:56:in `mark_active'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.2ms | Allocations: 141)
+Completed 200 OK in 7ms (Views: 0.7ms | ActiveRecord: 0.6ms | Allocations: 2386)
+
+
+Started PUT "/api/tasks/1/mark_complete?api_key=[FILTERED]" for ::1 at 2022-04-24 21:58:15 -0700
+Processing by Api::TasksController#mark_complete as */*
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:46:in `mark_complete'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:47:in `mark_complete'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:50:in `mark_complete'
+  [1m[36mTask Update (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", 1], ["updated_at", "2022-04-25 04:58:15.337099"], ["id", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:50:in `mark_complete'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:50:in `mark_complete'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.3ms | Allocations: 141)
+Completed 200 OK in 10ms (Views: 0.9ms | ActiveRecord: 2.7ms | Allocations: 4064)
+
+
+Started PUT "/api/tasks/1/mark_complete?api_key=[FILTERED]" for ::1 at 2022-04-24 21:58:16 -0700
+Processing by Api::TasksController#mark_complete as */*
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:46:in `mark_complete'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:47:in `mark_complete'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.2ms | Allocations: 141)
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 2385)
+
+
+Started PUT "/api/tasks/1/mark_active?api_key=[FILTERED]" for ::1 at 2022-04-24 21:58:17 -0700
+Processing by Api::TasksController#mark_active as JSON
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:55:in `mark_active'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:56:in `mark_active'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:59:in `mark_active'
+  [1m[36mTask Update (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", 0], ["updated_at", "2022-04-25 04:58:17.364592"], ["id", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:59:in `mark_active'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:59:in `mark_active'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.3ms | Allocations: 141)
+Completed 200 OK in 171ms (Views: 1.0ms | ActiveRecord: 1.6ms | Allocations: 6784)
+
+
+Started PUT "/api/tasks/2/mark_complete?api_key=[FILTERED]" for ::1 at 2022-04-24 21:58:18 -0700
+Processing by Api::TasksController#mark_complete as */*
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:46:in `mark_complete'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:47:in `mark_complete'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:50:in `mark_complete'
+  [1m[36mTask Update (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", 1], ["updated_at", "2022-04-25 04:58:18.304393"], ["id", 2]]
+  ↳ app/controllers/api/tasks_controller.rb:50:in `mark_complete'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:50:in `mark_complete'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.2ms | Allocations: 141)
+Completed 200 OK in 29ms (Views: 0.9ms | ActiveRecord: 1.6ms | Allocations: 6785)
+
+
+Started PUT "/api/tasks/2/mark_complete?api_key=[FILTERED]" for ::1 at 2022-04-24 21:58:18 -0700
+Processing by Api::TasksController#mark_complete as */*
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:46:in `mark_complete'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:47:in `mark_complete'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.2ms | Allocations: 141)
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 2385)
+
+
+Started PUT "/api/tasks/2/mark_active?api_key=[FILTERED]" for ::1 at 2022-04-24 21:58:19 -0700
+Processing by Api::TasksController#mark_active as JSON
+  Parameters: {"api_key"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:70:in `validate_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:55:in `mark_active'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/tasks_controller.rb:56:in `mark_active'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:59:in `mark_active'
+  [1m[36mTask Update (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", 0], ["updated_at", "2022-04-25 04:58:19.714464"], ["id", 2]]
+  ↳ app/controllers/api/tasks_controller.rb:59:in `mark_active'
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/tasks_controller.rb:59:in `mark_active'
+  Rendering api/tasks/show.jbuilder
+  Rendered api/tasks/show.jbuilder (Duration: 0.3ms | Allocations: 141)
+Completed 200 OK in 25ms (Views: 1.1ms | ActiveRecord: 6.8ms | Allocations: 4061)
+
+
