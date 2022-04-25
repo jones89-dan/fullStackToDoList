@@ -39,14 +39,26 @@ export var postTask = function (content, successCB, errorCB) {
 export var deleteTask = function (id) {
   $.ajax({
     type: 'DELETE',
-      url: 'api/tasks/' + id + "?api_key=1",
-      success: function (response, textStatus) {
-        indexTasks();
-        },
-        error: function (request, textStatus, errorMessage) {
-          console.log(errorMessage);
-        }
-      });
+    url: 'api/tasks/' + id + "?api_key=1",
+    success: function (response, textStatus) {
+    },
+    error: function (request, textStatus, errorMessage) {
+        console.log(errorMessage);
+    }
+  });
+}
+
+export var completeTask = function (id) {
+  $.ajax({
+    type: 'PUT',
+    url: 'api/tasks/' + id + '/mark_complete?api_key=1',
+    success: function (response, textStatus) {
+      console.log("task completed");
+    },
+    error: function (request, textStatus, errorMessage) {
+        console.log(errorMessage);
+    }
+  });
 }
 
 console.log('ajax requests');
