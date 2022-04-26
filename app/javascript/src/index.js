@@ -44,8 +44,7 @@ import {
     var id = $(e.target).parent().attr("data-id");
     activateTask(id);
     $(this).parent().removeClass("green");
+
   });
-
-
 
 });
