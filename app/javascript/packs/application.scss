@@ -1,13 +1,25 @@
 @import "bootstrap";
 
+body {
+  background-color: #23395d;
+}
+
+h1 {
+  color: #fff;
+}
+
 #tasks{
   margin-right: 100px;
   margin-left: 100px;
 }
 
 .green{
-  background-color: #C1E1C1;
+  background-color: #C1E1C1 !important;
   .complete {
   	visibility: hidden;
   }
+}
+
+.panel-info {
+  background-color: #fff;
 }
