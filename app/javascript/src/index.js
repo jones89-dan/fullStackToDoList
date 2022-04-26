@@ -11,8 +11,8 @@ import {
 
   indexTasks(function (response) {
     var htmlString = response.tasks.map(function(task) {
-      return "<div class='col-12 panel-info text-center p-2 mb-2 border rounded task " + (task.completed ? 'green' : '') + "' data-id='" + task.id + "'> \
-        <button type='button' class='activate float-left btn btn-outline-dark btn-sm mr-2'>Active</button> \
+      return "<div class='col-12 panel-info text-center p-2 mb-2 border rounded task " + (task.completed ? 'green' : 'activetask') + "' data-id='" + task.id + "'> \
+        <button type='button' class='activate float-left btn btn-outline-dark btn-sm mr-2'>Activate</button> \
         <button type='button' class='complete float-left btn btn-outline-dark btn-sm'>Complete</button>" + task.content + " \
         <button type='button' class='delete float-right btn btn-outline-dark btn-sm'>Delete</button></div>";
       });
@@ -37,12 +37,14 @@ import {
     var id = $(e.target).parent().attr("data-id");
     completeTask(id);
       $(this).parent().addClass("green");
+      $(this).parent().removeClass("activetask");
   });
 
   $('.activate').click(function(e){
     var id = $(e.target).parent().attr("data-id");
     activateTask(id);
     $(this).parent().removeClass("green");
+    $(this).parent().addClass("activetask");
   });
 
 });

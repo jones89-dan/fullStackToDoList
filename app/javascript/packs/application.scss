@@ -16,10 +16,17 @@ h1 {
 .green{
   background-color: #C1E1C1 !important;
   .complete {
-  	visibility: hidden;
+  	display: none;
+  }
+}
+
+.activetask {
+  .activate {
+    display: none;
   }
 }
 
 .panel-info {
   background-color: #fff;
+
 }
